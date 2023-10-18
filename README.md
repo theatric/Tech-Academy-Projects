@@ -1,2 +1,2 @@
 # Tech-Academy-Projects
-A repository of Tech Academy projects for the Web Developer Diploma taught through Pitman Training. 
+A repository of Tech Academy projects for the Web Developer Diploma delivered by Pitman Training. 
