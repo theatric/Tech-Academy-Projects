@@ -1,1 +1,1 @@
-A repository of coursework projects built with HTML and CSS. 
+A repository of coursework projects built using HTML and CSS. 
