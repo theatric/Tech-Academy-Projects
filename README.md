@@ -1,2 +1,2 @@
 # Tech-Academy-Projects
-This repository is for my Tech Academy projects
+A repository of Tech Academy projects for the Web Developer Diploma taught through Pitman Training. 
