@@ -1,0 +1,29 @@
+h1  {
+    color: purple;
+    text-align: center;
+}
+
+p {
+    color: black;
+    text-align: left;
+}
+      
+.font_1 {
+    background-color: black;
+    color: yellow;
+    font-size: large;
+}
+
+.font_2 {
+    background-color: darkblue;
+    color: white;
+    font-size: medium;
+}
+
+.my_style {
+    background-color: hotpink;
+    color: yellowgreen;
+    text-decoration: wavy;
+    font-weight: 900;
+    font-size: xx-large;
+}
