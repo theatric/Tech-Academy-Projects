@@ -11,7 +11,7 @@ A repository of Tech Academy coursework built using HTML and CSS. Amongst the as
    A one-page website for a fictional futuristic space resort, with features including a navbar, image gallery, animation effects and a non-functional contact form.
 
 ### One-Page Website
-   Developing the structure of the Space Station Website, this homepage for a tour guide company adds a section with an embedded video.
+   Building upon the structure of the Space Station Website, this homepage for a tour guide company adds a section with an embedded video.
 
 ### Bootstrap4 Project (Academy Cinemas)
    A simple cinema listings webpage enhanced and given responsiveness by use of the Bootstrap framework.
