@@ -9,5 +9,5 @@ A repository of Tech Academy coursework built using HTML and CSS. Amongst the as
    Developing the structure of the Space Station Website, this homepage for a tour guide company adds a section with an embedded video.
 
  - ### Bootstrap4 Project (Academy Cinemas)
-   A simple responsive cinema listings webpage enhanced by use of the Bootstrap framework. 
+   A simple cinema listings webpage enhanced and given responsiveness by use of the Bootstrap framework. 
 
