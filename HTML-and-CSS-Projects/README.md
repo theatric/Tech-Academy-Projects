@@ -1,5 +1,5 @@
 # HTML and CSS Projects
-### Introduction
+
 A repository of Tech Academy coursework built using HTML and CSS. Amongst the assortment of drills and exercises are the following substantial projects:
 
 - [Space Station Website](https://github.com/theatric/Tech-Academy-Projects/blob/main/HTML-and-CSS-Projects/Space-Station-Website/index.html)
