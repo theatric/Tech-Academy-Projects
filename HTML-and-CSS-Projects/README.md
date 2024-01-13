@@ -1,8 +1,11 @@
 # HTML and CSS Projects
-## Introduction
+### Introduction
 A repository of Tech Academy coursework built using HTML and CSS. Amongst the assortment of drills and exercises are the following substantial projects:
 
- - ### Space Station Website
+- Space Station Website
+- 
+
+### Space Station Website
    A one-page website for a fictional futuristic space resort, with features including a navbar, image gallery, animation effects and a non-functional contact form.
 
  - ### One-Page Website
