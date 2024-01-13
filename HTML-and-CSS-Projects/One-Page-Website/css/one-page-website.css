@@ -190,6 +190,12 @@ section {
     padding: 5px;
 }
 
+#video iframe {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
 #video p {
     color: #fff;
 }
@@ -217,35 +223,35 @@ section {
     padding: 10px;
     border-radius: 8px;
     margin: 0 auto;
-    background-color: rgba(100, 65, 0, .3);
+    background-color: rgba(255, 255, 255, .1);
     box-shadow: -1px -1px 1px 0 rgba(0, 0, 0, .1), 1px 2px 10px 0 rgba(0, 0, 0, .5);
 }
 
-.reservation h2 {
+.reservation h3 {
     width: 70%;
     text-align: center;
     margin: 0 auto;
-    color: #13161b;
+    color: #ffffff;
     font-weight: 500;
     font-size: 1.3em;
     letter-spacing: 0pt;
     word-spacing: 0pt;
 }
 
-.reservation h2 span {
+.reservation h3 span {
     width: 70%;
     text-align: center;
     margin: 0 auto;
-    color: #13161b;
+    color: #fff;
     font-weight: 900;
-    font-size: 1.5em;
-    font-variant: small-caps;
+    font-size: 1.2em;
     letter-spacing: .4pt;
     word-spacing: .3pt;
 }
 
 .reservation p {
-    color: #13161b;
+    color: #fff;
+    text-transform: uppercase;
     width: 50%;
     margin: 0 auto;
 }
@@ -338,9 +344,9 @@ section {
     FOOTER STYLES
 ------------------------------------------------------*/
 
-#footer {
-    background-color: rgba(100, 65, 0, .3);
-    color: #000;
+footer {
+    background-color: rgba(255, 255, 255, .3);
+    color: #fff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
     padding: 20px 50px;
     text-align: right;

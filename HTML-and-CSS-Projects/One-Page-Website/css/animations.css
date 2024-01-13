@@ -3,7 +3,6 @@
 ---------------------------------------------------*/
 
 .menu {
-    color: #f00;
     font: bold 12px/18px sans-serif;
     text-align: center;
     display: inline;
@@ -25,14 +24,14 @@
     border-radius: 6px;
     cursor: pointer;
     transition-property: background-color;
-    transition-duration: .4s;
+    transition-duration: .2s;
     transition-delay: 0s;
     transition-timing-function: ease-in-out;
 }
 
 .menu li:hover {
-    color: #f00;
-    background-color: rgba(100, 65, 0, .3);
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
 }
 /*-------------------------------------------------
     GALLERY SECTION ANIMATION

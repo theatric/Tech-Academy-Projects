@@ -42,7 +42,7 @@
 }
 
 .overlay:hover {
-    opacity: 1;
+    opacity: .5;
 }
 
 h3 {
@@ -58,7 +58,7 @@ video {
     margin: 0 auto; 
     padding: 20px;
     width: 75%; 
-    filter: blur(5px);
+    filter: grayscale(50%);
     border-radius: 5%;
 }
 
@@ -98,10 +98,21 @@ table, th, td {
 th {
     background-color: chartreuse;
 }
+.heading {
+    background-color: chartreuse;
+    font-weight: bold;
+}
 
 th, td {
     padding: 10px 15px;
 }
+
+th.blank {
+    background-color: transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
 
 footer p {
     text-align: center;
