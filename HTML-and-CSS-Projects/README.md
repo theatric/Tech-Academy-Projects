@@ -4,7 +4,7 @@ A repository of Tech Academy coursework built using HTML and CSS. Amongst the as
 
 
  - ### Space Station Website
-   A one-page website for a fictional futuristic space resort built using basic HTML and CSS. Features include a navbar, image gallery and a non-functional contact form.
+   A one-page website for a fictional futuristic space resort, with features including a navbar, image gallery, animation effect and a non-functional contact form.
 
  - ### One-Page Website
    Based on the structure of the Space Station Website, this homepage for a tour guide company adds a section with an embedded video.
