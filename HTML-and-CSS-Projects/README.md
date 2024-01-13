@@ -5,7 +5,7 @@ A repository of Tech Academy coursework built using HTML and CSS. Amongst the as
 - [Space Station Website](https://github.com/theatric/Tech-Academy-Projects/blob/main/HTML-and-CSS-Projects/Space-Station-Website/index.html)
 - [One-Page Website](https://github.com/theatric/Tech-Academy-Projects/blob/main/HTML-and-CSS-Projects/One-Page-Website/one_page_website.html)
 - [Bootstrap4 Project (Academy Cinemas)](https://github.com/theatric/Tech-Academy-Projects/blob/main/HTML-and-CSS-Projects/Bootstrap4-Project/academy_cinemas.html)
-- Portfolio Website
+- [Portfolio Website](https://github.com/theatric/Tech-Academy-Projects/blob/main/HTML-and-CSS-Projects/Portfolio-Website/index.html)
 
 ### Space Station Website
    A one-page website for a fictional futuristic space resort, with features including a navbar, image gallery, animation effects and a non-functional contact form.
@@ -16,5 +16,4 @@ A repository of Tech Academy coursework built using HTML and CSS. Amongst the as
 ### Bootstrap4 Project (Academy Cinemas)
    A simple cinema listings webpage enhanced and given responsiveness by use of the Bootstrap framework.
 
-### [Portfolio Website ](https://github.com/theatric/Tech-Academy-Projects/blob/main/HTML-and-CSS-Projects/Portfolio-Website/index.html)https://github.com/theatric/Tech-Academy-Projects/blob/main/HTML-and-CSS-Projects/Portfolio-Website/index.html
-
+### Portfolio Website
