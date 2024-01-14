@@ -17,4 +17,4 @@ A repository of Tech Academy coursework built using HTML and CSS. Amongst the as
    A simple cinema listings webpage enhanced and given responsiveness by use of the Bootstrap framework.
 
 ### Portfolio Website
-   A rudimentary, dynamic portfolio site with a functional contact form, the first of my projects to be hosted online with its own [URL](https://theatric.net). To be upgraded and built upon in future assignments. 
+   A rudimentary, dynamic portfolio site with a functional contact form, the first of my projects to be hosted online with its own [URL](https://theatric.net). This site will be upgraded and built upon in future assignments. 
