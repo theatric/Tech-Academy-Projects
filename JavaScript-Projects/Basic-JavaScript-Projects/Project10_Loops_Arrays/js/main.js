@@ -92,33 +92,3 @@ function continue_Function() {
    }
    document.getElementById("continue").innerHTML = text;
 }
-    
-// Switch Statement Assignment
-function color_Function() {
-    var color_output;
-    var colors = document.getElementById("color_input").value;
-    var color_string = " is a great color!";
-    switch(colors) {
-        case "red":
-            color_output = "Red " + color_string;
-        break;
-        case "yellow":
-            color_output = "Yellow " + color_string;
-        break;
-        case "green":
-            color_output = "Green " + color_string;
-        break;
-        case "blue":
-            color_output = "Blue " + color_string;
-        break;
-        case "pink":
-            color_output = "Pink " + color_string;
-        break;
-        case "purple":
-            color_output = "Purple " + color_string;
-        break;
-        default:
-            color_output = "Please enter a color exactly as written on the above list.";
-    }
-    document.getElementById("output").innerHTML = color_output;
-}

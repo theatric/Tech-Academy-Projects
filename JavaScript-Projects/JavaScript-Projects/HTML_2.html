@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML_2</title>
+    <link rel="stylesheet" href="css/CSS_1.css">
+    <script src="js/JavaScript_2.js" defer></script>
+  </head>
+
+  <body>
+
+    <div>
+        <form name="form" action="" onsubmit="return validateForm()" method="post">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="First Name" required>
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Last Name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Email Address">
+        
+            <label for="language">Language</label>
+            <select id="language" name="language">
+            <option value="english">English</option>
+            <option value="cymraeg">Cymraeg</option>
+            </select>
+      
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+  </body>
+
+</html>
