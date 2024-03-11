@@ -1,0 +1,128 @@
+/*-----------------------------------------------------
+                    LIGHTBOX STYLES
+-------------------------------------------------------*/
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* The modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 500;
+  padding-top: 75px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* modal content */
+.modal-container, 
+.controls-container {
+  position: relative;
+  margin: 0 auto;
+  width: 75%;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+/* close button */
+.close {
+  color: #f9f9f9;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  border: 5px solid #f9f9f9;
+}
+
+/* next and previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -15px;
+  padding: 15px;
+  color: #f9f9f9;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev {
+  left: 15px;
+  border-radius: 0 7px 7px 0;
+}
+
+/* position the 'next button' to the right */
+.next {
+  right: 15px;
+  border-radius: 7px 0 0 7px;
+}
+
+/* on hover, add a black background colour with a little bit see-through */
+.prev:hover,
+.next:hover  {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+/* number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 10px;
+  right: 25px;
+}
+
+/* caption text */
+.caption-container {
+  text-align: center;
+  padding: 15px 25px;
+}
+
+.caption-container p {
+  font-weight: 900;
+  color: #f9f9f9;
+}
+
+/*=======================================
+    @MEDIA QUERIES
+  =======================================*/
+
+  @media screen and (max-width: 1300px) {
+    .mySlides img {
+      width: 70%;
+   }
+ }
+  

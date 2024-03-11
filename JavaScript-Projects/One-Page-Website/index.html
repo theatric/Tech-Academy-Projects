@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adrian Metcalfe | Celtic Tours</title>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/lightbox.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/lightbox.js" defer></script>
+  <body>
+    <!-- NAV -->
+    <navbar>
+      <ul id="menu">
+        <a href="#home"><li class="btn">HOME</li></a>
+        <a href="#gallery"><li class="btn">GALLERY</li></a>
+        <a href="#video"><li class="btn">VIRTUAL TOUR</li></a>
+        <a href="#contact"><li class="btn">CONTACT</li></a>
+      </ul>
+    </navbar>
+
+    <!-- END NAV -->
+
+    <div class="overlay">
+      <!-- HOME -->
+      <section id="home">
+        <div class="container">
+          <h1>
+            <span class="signature">Adrian Metcalfe's</span>
+            <span class="logo">Celtic <img src="./images/knot.png" alt="" class="icon" /> Tours</span>
+          </h1>
+          <h3>
+            Step back into history with a <br />
+            master storyteller as your guide.
+          </h3>
+        
+          <div class="about-row">
+            <div class="column">
+              <img
+                src="./images/guide.jpg"
+                alt=""
+                style="
+                  position: absolute;
+                  width: 100%;
+                  transform: rotate(-3deg);
+                  border: 5px solid white;
+                  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+                  z-index: 30;
+                "
+              />
+              <img
+                src="./images/thumb/thumbnail_6.jpg"
+                alt=""
+                style="
+                  position: absolute;
+                  width: 100%;
+                  translate: -5% 13%;
+                  transform: rotate(-5deg);
+                  border: 5px solid white;
+                  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+                  filter: grayscale(50%);
+                  z-index: 20;
+                "
+              />
+              <img
+                src="./images/thumb/thumbnail_2.jpg"
+                alt=""
+                style="
+                  position: absolute;
+                  width: 100%;
+                  translate: -1% 27%;
+                  transform: rotate(7deg);
+                  border: 5px solid white;
+                  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+                  filter: grayscale(30%);
+                  z-index: 10;
+                "
+              />
+            </div>
+            <div class="column" style="padding: 25px">
+              <div>
+                <p>
+                  Adrian Metcalfe has been leading tours in Wales, Ireland and
+                  all over Europe for more than twenty-five years. He is a true
+                  Celt (an Irish mother and a Welsh father) and as such he loves
+                  stories and travel. He is a certified national guide in Wales
+                  and Ireland, a Welsh speaker, and is a great aficionado of the
+                  life and works of Dylan Thomas.<br /><br />
+                  Aside from being a tour guide, Adrian works as an actor and
+                  got his start with Wales Actors' Company, touring castles and
+                  ancient sites around Wales with Shakespeare's
+                  <em>Henry V</em>. He lived in Vienna for several months while
+                  working for Vienna's English Theatre and the Kammerspielhaus;
+                  and then moved to New York where he worked for CBS's Community
+                  Concerts.<br /><br />
+                  With bases in both Kinsale and Swansea, he can help you
+                  explore whatever parts of the Celtic region appeal to you, and
+                  whether it is one day or several, there will always be time to
+                  relax. In the words of one of the great Celtic saints, David:
+                  "Gwnewch y pethau bychain (Do the little things)!"...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END HOME -->
+
+      <!-- GALLERY -->
+      <section id="gallery">
+        <div class="container">
+          <h2>Gallery</h2>
+          <h3>Click to enlarge:</h3>
+          <br />
+          <!-- IMAGES USED TO OPEN THE LIGHTBOX -->
+          <div class="flex-container">
+            <!-- THUMBNAIL 1 -->
+            <div class="thumbnail-container">
+              <div class="thumbnail" onmouseover="showTitle()">
+                <img src="./images/thumb/thumbnail_1.jpg" />
+                <div
+                  class="thumbnail-overlay"
+                  onclick="openModal();currentSlide(1)"
+                >
+                  <p>Conway Castle</p>
+                </div>
+              </div>
+            </div>
+            <!-- END THUMBNAIL 1 -->
+
+            <!-- THUMBNAIL 2 -->
+            <div class="thumbnail-container">
+              <div class="thumbnail">
+                <img src="./images/thumb/thumbnail_2.jpg" />
+                <div
+                  class="thumbnail-overlay"
+                  onclick="openModal();currentSlide(2)"
+                >
+                  <p>Highland Cattle</p>
+                </div>
+              </div>
+            </div>
+            <!-- END THUMBNAIL 2 -->
+
+            <!-- THUMBNAIL 3 -->
+            <div class="thumbnail-container">
+              <div class="thumbnail">
+                <img src="./images/thumb/thumbnail_3.jpg" />
+                <div
+                  class="thumbnail-overlay"
+                  onclick="openModal();currentSlide(3)"
+                >
+                  <p>Mumbles Lighthouse</p>
+                </div>
+              </div>
+            </div>
+            <!-- END THUMBNAIL 3 -->
+
+            <!-- THUMBNAIL -->
+            <div class="thumbnail-container">
+              <div class="thumbnail">
+                <img src="./images/thumb/thumbnail_4.jpg" />
+                <div
+                  class="thumbnail-overlay"
+                  onclick="openModal();currentSlide(4)"
+                >
+                  <p>Tour of Oystermouth</p>
+                </div>
+              </div>
+            </div>
+            <!-- END THUMBNAIL 4 -->
+
+            <!-- THUMBNAIL 5 -->
+            <div class="thumbnail-container">
+              <div class="thumbnail">
+                <img src="./images/thumb/thumbnail_5.jpg" />
+                <div
+                  class="thumbnail-overlay"
+                  onclick="openModal();currentSlide(5)"
+                >
+                  <p>The Tap Tavern, Kinsale</p>
+                </div>
+              </div>
+            </div>
+            <!-- END THUMBNAIL 5 -->
+
+            <!-- THUMBNAIL 6 -->
+            <div class="thumbnail-container">
+              <div class="thumbnail">
+                <img src="./images/thumb/thumbnail_6.jpg" />
+                <div
+                  class="thumbnail-overlay"
+                  onclick="openModal();currentSlide(6)"
+                >
+                  <p>Kinsale Harbour</p>
+                </div>
+              </div>
+            </div>
+            <!-- END THUMBNAIL 6 -->
+
+            <!-- THUMBNAIL 7 -->
+            <div class="thumbnail-container">
+              <div class="thumbnail">
+                <img src="./images/thumb/thumbnail_7.jpg" />
+                <div
+                  class="thumbnail-overlay"
+                  onclick="openModal();currentSlide(7)"
+                >
+                  <p>Sheep, obviously</p>
+                </div>
+              </div>
+            </div>
+            <!-- END THUMBNAIL 7 -->
+
+            <!-- THUMBNAIL 8 -->
+            <div class="thumbnail-container">
+              <div class="thumbnail">
+                <img src="./images/thumb/thumbnail_8.jpg" />
+                <div
+                  class="thumbnail-overlay"
+                  onclick="openModal();currentSlide(8)"
+                >
+                  <p>Caenarfon Castle</p>
+                </div>
+              </div>
+            </div>
+            <!-- END THUMBNAIL 8 -->
+          </div>
+          <!-- END GALLERY -->
+
+          <!-- LIGHTBOX -->
+          <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <div class="modal-container">
+              <div class="mySlides">
+                <img src="./images/image_1.jpg" />
+                <div class="numbertext">1 / 8</div>
+              </div>
+
+              <div class="mySlides">
+                <img src="./images/image_2.jpg" />
+                <div class="numbertext">2 / 8</div>
+              </div>
+
+              <div class="mySlides">
+                <img src="./images/image_3.jpg" />
+                <div class="numbertext">3 / 8</div>
+              </div>
+
+              <div class="mySlides">
+                <img src="./images/image_4.jpg" />
+                <div class="numbertext">4 / 8</div>
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">5 / 8</div>
+                <img src="./images/image_5.jpg" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">6 / 8</div>
+                <img src="./images/image_6.jpg" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">7 / 8</div>
+                <img src="./images/image_7.jpg" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">8 / 8</div>
+                <img src="./images/image_8.jpg" />
+              </div>
+
+              <!-- PREVIOUS/NEXT CONTROLS -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <!-- CAPTION TEXT -->
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+            </div>
+            <div class="controls-container">
+              <!-- THUMBNAIL IMAGE CONTROLS -->
+              <div class="flex-container">
+                <div class="preview-container">
+                  <!-- THUMBNAIL 1 -->
+                  <div class="thumbnail">
+                    <img
+                      class="preview"
+                      src="./images/thumb/thumbnail_1.jpg"
+                      onclick="currentSlide(1)"
+                      alt="Conway Castle"
+                    />
+                  </div>
+                </div>
+                <!-- END THUMBNAIL 1 -->
+
+                <!-- THUMBNAIL 2 -->
+                <div class="preview-container">
+                  <div class="thumbnail">
+                    <img
+                      class="preview"
+                      src="./images/thumb/thumbnail_2.jpg"
+                      onclick="currentSlide(2)"
+                      alt="Highland Cattle"
+                    />
+                  </div>
+                </div>
+                <!-- END THUMBNAIL 2 -->
+
+                <!-- THUMBNAIL 3 -->
+                <div class="preview-container">
+                  <div class="thumbnail">
+                    <img
+                      class="preview"
+                      src="./images/thumb/thumbnail_3.jpg"
+                      onclick="currentSlide(3)"
+                      alt="Mumbles Lighthouse"
+                    />
+                  </div>
+                </div>
+                <!-- END THUMBNAIL 3 -->
+
+                <!-- THUMBNAIL 4 -->
+                <div class="preview-container">
+                  <div class="thumbnail">
+                    <img
+                      class="preview"
+                      src="./images/thumb/thumbnail_4.jpg"
+                      onclick="currentSlide(4)"
+                      alt="Tour of Oystermouth"
+                    />
+                  </div>
+                </div>
+                <!-- END THUMBNAIL 4 -->
+
+                <!-- THUMBNAIL 5 -->
+                <div class="preview-container">
+                  <div class="thumbnail">
+                    <img
+                      class="preview"
+                      src="./images/thumb/thumbnail_5.jpg"
+                      onclick="currentSlide(5)"
+                      alt="The Tap Tavern, Kinsale"
+                    />
+                  </div>
+                </div>
+                <!-- END THUMBNAIL 5 -->
+
+                <!-- THUMBNAIL 6 -->
+                <div class="preview-container">
+                  <div class="thumbnail">
+                    <img
+                      class="preview"
+                      src="./images/thumb/thumbnail_6.jpg"
+                      onclick="currentSlide(6)"
+                      alt="Kinsale Harbour"
+                    />
+                  </div>
+                </div>
+                <!-- END THUMBNAIL 6 -->
+
+                <!-- THUMBNAIL 7 -->
+                <div class="preview-container">
+                  <div class="thumbnail">
+                    <img
+                      class="preview"
+                      src="./images/thumb/thumbnail_7.jpg"
+                      onclick="currentSlide(7)"
+                      alt="Sheep, obviously"
+                    />
+                  </div>
+                </div>
+                <!-- END THUMBNAIL 7 -->
+
+                <!-- THUMBNAIL 8 -->
+                <div class="preview-container">
+                  <div class="thumbnail">
+                    <img
+                      class="preview"
+                      src="./images/thumb/thumbnail_8.jpg"
+                      onclick="currentSlide(8)"
+                      alt="Caernarfon Castle"
+                    />
+                  </div>
+                </div>
+                <!-- END THUMBNAIL 8 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END LIGHTBOX -->
+
+      <!-- VIDEO -->
+      <section id="video">
+        <div class="container">
+          <h2>Virtual Tour</h2>
+          <h3>
+            Watch as Adrian conducts a virtual walking tour of Mumbles, South
+            Wales:
+          </h3>
+          <br />
+          <div class="video-container">
+          <iframe class="responsive" 
+            src="https://cdn.jwplayer.com/players/gLwl21kf-LERDeGwz.html"
+            width="960"
+            height="630"
+            frameborder="0"
+            title="Stumbles Through Mumbles"
+            controls 
+            allowfullscreen
+          ></iframe>
+        </div>
+        </div>
+      </section>
+      <!-- END VIDEO -->
+
+      <!-- RSVP -->
+      <section id="contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <div class="reservation">
+            <h3>
+              Step into a world of ancient legends and natural beauty <br />as
+              Adrian leads you through a captivating Celtic adventure.<br />
+              <br />Get in touch today!
+            </h3>
+            <p>Please enter your contact details here.</p>
+            <div class="form-rsvp">
+              <form action="" method="post">
+                <input class="rsvp" type="text" value="First Name" />
+                <input class="rsvp" type="text" value="Last Name" />
+                <input class="rsvp" type="text" value="Email Address" />
+                <input class="rsvp" type="text" value="Phone Number" />
+                <div class="form-spacer"></div>
+                <div class="submit">
+                  <label class="terms">Terms and Conditions</label>
+                  <input type="submit" value="Submit" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END RSVP -->
+
+      <!-- FOOTER -->
+      <footer><p>www.am-ct.com &nbsp;|&nbsp; &copy; 2024</p></footer>
+      <!-- END FOOTER -->
+    </div>
+  </body>
+</html>

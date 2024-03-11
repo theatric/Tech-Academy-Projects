@@ -1,0 +1,111 @@
+/*-------------------------------------------------
+    MENU SECTION ANIMATION
+---------------------------------------------------*/
+
+#menu {
+    font: bold 12px/18px sans-serif;
+    text-align: center;
+    display: inline;
+    margin: 0% auto;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#menu .btn {
+    color: #f9f9f9;
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(3px);
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    padding: 15px 4%;
+    border: 1px solid #9d9fa2;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, .5);
+    border-radius: 6px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: .2s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+#menu .btn:hover, #menu .current {
+    color: #000;
+    background-color: #f9f9f9;
+}
+
+/*-------------------------------------------------
+    GALLERY SECTION ANIMATION
+---------------------------------------------------*/
+
+.thumbnail-container {
+    width: 25%;
+    cursor: pointer;
+}
+
+.preview-container {
+    width: 12.5%;
+    cursor: pointer;
+}
+
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #f9f9f9;
+}
+
+.thumbnail img {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+}
+
+.thumbnail-overlay {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .25);
+}
+
+.thumbnail-overlay p {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    font-weight: 900;
+    color: #f9f9f9;
+}
+
+/*-------------------------------------------------
+    PHOTO OVERLAY TRANSITIONS
+---------------------------------------------------*/
+
+.thumbnail-overlay {
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.thumbnail-overlay:hover {
+    opacity: 1;
+}
+
+.thumbnail img {
+    transition: transform .5s;
+    transform-origin: 50% 50%;
+    filter: grayscale(.7);
+}
+
+.thumbnail:hover img {
+    transform: scale(1.1);
+    filter: none;
+}
+
+img.active {
+    filter: none;
+}
+
+
+
+

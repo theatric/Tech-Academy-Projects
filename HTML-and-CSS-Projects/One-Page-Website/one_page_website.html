@@ -9,30 +9,101 @@
 	<body>
 	
     <!-- NAV -->
-    <div class="wrap">
-        <div class="menu-container">
-            <ul class="menu">
-                <a href="#home"><li>ABOUT</li></a>
-                <a href="#gallery"><li>GALLERY</li></a>
-                <a href="#video"><li>VIRTUAL TOUR</li></a>
-                <a href="#contact"><li>CONTACT</li></a>
-            </ul>
+    <div class="overlay">
+        </div> <div class="wrap">
+            <div class="menu-container">
+                <ul class="menu">
+                    <a href="#home"><li>ABOUT</li></a>
+                    <a href="#gallery"><li>GALLERY</li></a>
+                    <a href="#video"><li>VIRTUAL TOUR</li></a>
+                    <a href="#contact"><li>CONTACT</li></a>
+                </ul>
+            </div>
         </div>
-    </div>
     <!-- END NAV -->
 
     <!-- HOME -->
-    <div id="home">
-        <div class="container">
-            <div class="text-center">
-                <span class="head-main">Adrian Metcalfe Celtic Tours</span>
-                <h2>Step back into history with a master storyteller as your guide.</h2>
-                <p>Adrian Metcalfe has been leading tours in Wales, Ireland and all over Europe for more than twenty-five years. He is a true Celt (an Irish mother and a Welsh father) and as such he loves stories and travel. He is a certified national guide in Wales and Ireland, a Welsh speaker, and is a great aficionado of the life and works of Dylan Thomas.<br><br>
-                    Aside from being a tour guide, Adrian works as an actor and got his start with Wales Actors' Company, touring castles and ancient sites around Wales with Shakespeare's <em>Henry V</em>. He lived in Vienna for several months while working for Vienna's English Theatre and the Kammerspielhaus; and then moved to New York where he worked for CBS's Community Concerts.<br><br>
-                    With bases in both Kinsale and Swansea, he can help you explore whatever parts of the Celtic region appeal to you, and whether it is one day or several, there will always be time to relax. In the words of one of the great Celtic saints, David: "Gwnewch y pethau bychain (Do the little things)!"...</p>
+    <section>
+        <div id="home">
+            <div class="container" style="margin-top: -150px;">
+
+                <div class="text-center padding-bottom">
+                    <span class="head-main">Adrian Metcalfe Celtic Tours</span>
+                    <h2>Step back into history with a master storyteller as your guide.</h2>
+                </div>
+
+                <div class="text-row">
+                    <div class="column">
+                    <img
+                        src="./images/guide.jpg"
+                        alt=""
+                        style="
+                        position: absolute;
+                        width: 100%;
+                        transform: rotate(-3deg);
+                        border: 5px solid white;
+                        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+                        z-index: 30;
+                        "
+                    />
+                    <img
+                        src="./images/thumb/thumbnail_6.jpg"
+                        alt=""
+                        style="
+                        position: absolute;
+                        width: 100%;
+                        translate: -5% 13%;
+                        transform: rotate(-5deg);
+                        border: 5px solid white;
+                        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+                        filter: grayscale(50%);
+                        z-index: 20;
+                        "
+                    />
+                    <img
+                        src="./images/thumb/thumbnail_2.jpg"
+                        alt=""
+                        style="
+                        position: absolute;
+                        width: 100%;
+                        translate: -1% 27%;
+                        transform: rotate(7deg);
+                        border: 5px solid white;
+                        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+                        filter: grayscale(30%);
+                        z-index: 10;
+                        "
+                    />
+                    </div>
+                    <div class="column" style="padding: 25px">
+                    <div>
+                        <p>
+                        Adrian Metcalfe has been leading tours in Wales, Ireland and
+                        all over Europe for more than twenty-five years. He is a true
+                        Celt (an Irish mother and a Welsh father) and as such he loves
+                        stories and travel. He is a certified national guide in Wales
+                        and Ireland, a Welsh speaker, and is a great aficionado of the
+                        life and works of Dylan Thomas.<br /><br />
+                        Aside from being a tour guide, Adrian works as an actor and
+                        got his start with Wales Actors' Company, touring castles and
+                        ancient sites around Wales with Shakespeare's
+                        <em>Henry V</em>. He lived in Vienna for several months while
+                        working for Vienna's English Theatre and the Kammerspielhaus;
+                        and then moved to New York where he worked for CBS's Community
+                        Concerts.<br /><br />
+                        With bases in both Kinsale and Swansea, he can help you
+                        explore whatever parts of the Celtic region appeal to you, and
+                        whether it is one day or several, there will always be time to
+                        relax. In the words of one of the great Celtic saints, David:
+                        "Gwnewch y pethau bychain (Do the little things)!"...
+                        </p>
+                    </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
+    </section>
     <!-- END HOME -->
 
     <!-- GALLERY -->
@@ -125,7 +196,7 @@
         <div class="container">
         <h1>Virtual Tour</h1>
               <div>
-                <p>Watch as Adrian conducts a virtual walking tour of Mumbles, South Wales:</p>
+                <p style="text-align: center;">Watch as Adrian conducts a virtual walking tour of Mumbles, South Wales:</p>
                 <iframe src="https://cdn.jwplayer.com/players/gLwl21kf-LERDeGwz.html" width="960" height="540" frameborder="0" scrolling="auto" title="Stumbles Through Mumbles" allowfullscreen></iframe></div>
              </div>
         </div>
@@ -134,9 +205,9 @@
 
 
     <!-- RSVP -->
-    <section id="contact">
-        <div class="container">
-            <div class="heading-padding">
+    <section>
+        <div id="contact">
+            <div class="container padding-bottom">
                 <h1>Contact</h1>
                 <div class="reservation">
                     <h3><span> Step into a world of ancient legends and natural beauty as Adrian leads you through a captivating Celtic adventure. </span>
@@ -171,6 +242,6 @@
         www.am-ct.com &nbsp;|&nbsp; &copy; 2023
     </footer>
     <!-- END FOOTER -->
-
+    </div>
 	</body>
 </html>

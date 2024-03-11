@@ -1,0 +1,314 @@
+/*-----------------------------------------------------
+                    GENERIC STYLES
+-------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  right: 0;
+  left: 0;
+  z-index: -100;
+  background: url(../images/valley.jpg) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, .3);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.9);
+  color: #f9f9f9;
+  letter-spacing: -1pt;
+  font-size: 3.5em;
+  text-align: center;
+  font-family: "Book Antiqua", "Times New Roman", serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f9f9f9;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+h2::after {
+  /* This is the underline */
+  display: block;
+  content: "";
+  height: 2px;
+  width: 150px;
+  background: #f9f9f9;
+  margin: 5px auto 40px;
+  box-shadow: 5px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #f9f9f9;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #f9f9f9;
+}
+
+.container {
+  margin: 0 auto;
+  width: 75%;
+  max-width: 1200px;
+  padding: 100px 15px 0;
+}
+
+navbar {
+  margin: 0% auto;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  z-index: 400;
+}
+
+/*-----------------------------------------------------
+   HOME SECTION STYLES
+   ----------------------------------------------------*/
+
+.signature {
+    font-size: 24px;
+    font-style: italic;
+    text-transform: none;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    color: #f9f9f9;
+    display: block;
+    transform: rotate(-3deg);
+    translate: -150px 10px;
+  }
+  
+img.icon {
+    display: inline-block;
+    width: 50px;
+    margin-bottom: -5px;
+    border: none;
+  }
+  
+.about-row {
+  display: flex;
+  margin-top: 50px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border: 1px solid #f9f9f9;
+}
+
+.about-row .column {
+  position: relative;
+  width: 50%;
+}
+
+/*-----------------------------------------------------
+   VIRTUAL TOUR SECTION STYLES
+   ----------------------------------------------------*/
+
+.video-container {
+  position: relative;
+  margin: 0 auto;
+  overflow: auto;
+  width: 100%;
+  padding-top: 56%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  border: 3px solid #f9f9f9;
+}
+
+.video-container p {
+  color: #f9f9f9;
+}
+
+.responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*----------------------------------------------------
+  CONTACT SECTION STYLES
+------------------------------------------------------*/
+
+.reservation {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0 auto 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  border: 1px solid #f9f9f9;
+  text-align: center;
+}
+
+.reservation h3 {
+  width: 70%;
+  margin: 0 auto;
+  color: #f9f9f9;
+  font-weight: 900;
+  font-size: 1.2em;
+  letter-spacing: 0.4pt;
+  word-spacing: 0.3pt;
+}
+
+.form-rsvp {
+  font-size: 15px;
+  outline: none;
+  font-weight: 600;
+  color: #8d8e8f;
+  padding: 12px 12px;
+  width: 50%;
+  border: 1px solid #808080;
+  margin: 2% auto;
+  border-radius: 7px;
+  background: rgb(227, 222, 222);
+  box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, 0.3);
+  font-family: "Raleway", sans-serif;
+}
+
+.reservation input[type="text"] {
+  font-size: 15px;
+  outline: none;
+  font-weight: 600;
+  color: #8d8e8f;
+  padding: 2% 1% 2% 7%;
+  width: 90%;
+  border-top: 1px solid #090b0d;
+  border-right: 2px solid #424549;
+  border-bottom: 2px solid #424549;
+  border-left: 1px solid #090b0d;
+  margin: 10px 1em;
+  border-radius: 7px;
+  background: #13161b;
+  box-shadow: inset 0 3px 0 0 rgba(5, 5, 5, 0.15);
+  font-family: "Raleway", sans-serif;
+}
+
+.reservation input[type="text"]:hover {
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.8);
+}
+
+.form-spacer {
+  padding: 30px 39px;
+}
+
+.terms {
+  margin: 23px 41px 0 0;
+  font-size: 14px;
+  line-height: 5px;
+  color: #000;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  position: relative;
+  display: inline;
+  float: right;
+}
+
+.terms:hover {
+  color: #005555;
+  text-decoration: underline;
+}
+
+.submit input[type="submit"] {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: none;
+  font-weight: 900;
+  outline: none;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  margin: 0 3%;
+  padding: 7px 0;
+  width: 25%;
+  font-size: 18px;
+  transition: border-color, 0.3s color, 0.3s background-color 0.3s;
+  border-radius: 7px;
+  background-color: #797a7b;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.submit input[type="submit"]:hover {
+  color: #100;
+  background-color: #8d8e8f;
+  box-shadow: inset 1px 2px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+/*----------------------------------------------------
+    FOOTER STYLES
+------------------------------------------------------*/
+
+footer {
+  background-color: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(3px);
+  border-top: 1px solid #9d9fa2;
+  padding: 20px 50px;
+  text-align: right;
+}
+
+footer p {
+  color: #f9f9f9;
+}
+
+/*=======================================
+    @MEDIA QUERIES
+  =======================================*/
+
+@media screen and (max-width: 1200px) {
+  .signature {
+    font-size: 2.5vw;
+    translate: -12vw 10px; 
+  }
+
+  .logo {
+    font-size: 5vw;
+  }
+
+  img.icon {
+    width: 4vw;
+    margin-bottom: -2.5px;
+  }
+  
+  h3 {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .signature {
+    translate: -12vw 3vh; 
+  }
+
+}
