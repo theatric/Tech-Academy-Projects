@@ -20,13 +20,13 @@
                     </div>\
                 </body>"
             );            
-            $("#2").click(function() {
-                $('h1').hide("slow");
+            $("#2").hover(function() {
+                $('h1').slideUp(800);
                  }); 
             $("#3").css({"color": "red"});
             $("<br><br><button id='restore'>Restore the Heading!</button>").appendTo( "#3");
             $('#restore').click(function() {
-                $('h1').show("fast");
+                $('h1').toggle("fast");
             });
         });
     </script>
