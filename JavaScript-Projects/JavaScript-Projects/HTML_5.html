@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Challenges</title>
+    <link rel="stylesheet" href="css/challenges.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/JavaScript_5.js" defer></script>
+  </head>
+  <body>
+  
+      <navbar>
+        <ul id="menu">
+          <a href="#home"><li class="btn">HOME</li></a>
+          <a href="#about"><li class="btn">ABOUT</li></a>
+          <a href="#slideshow"><li class="btn">SLIDESHOW</li></a>
+        </ul>
+      </navbar>
+
+      <div id="container">
+        <div id="home">
+          <h1>Celtic Tours</h1>
+          <div class="featured-frame">
+            <img
+              src="./images/valley.jpg"
+              height="250"
+              width="auto"
+              alt=""
+              class="featured"
+            />
+          </div>
+        </div>
+
+        <div id="about">
+          <p>
+            Adrian Metcalfe has been leading tours in Wales, Ireland and all over
+            Europe for more than twenty-five years. He is a true Celt (an Irish
+            mother and a Welsh father) and as such he loves stories and travel. He
+            is a certified national guide in Wales and Ireland, a Welsh speaker, and
+            is a great aficionado of the life and works of Dylan Thomas.
+          </p>
+
+          <p>
+            Aside from being a tour guide, Adrian works as an actor and got his
+            start with Wales Actors' Company, touring castles and ancient sites
+            around Wales with Shakespeare's Henry V. He lived in Vienna for several
+            months while working for Vienna's English Theatre and the
+            Kammerspielhaus; and then moved to New York where he worked for CBS's
+            Community Concerts.
+          </p>
+
+          <p>
+            With bases in both Kinsale and Swansea, he can help you explore whatever
+            parts of the Celtic region appeal to you, and whether it is one day or
+            several, there will always be time to relax. In the words of one of the
+            great Celtic saints, David: "Gwnewch y pethau bychain (Do the little
+            things)!"...
+          </p>
+        </div>
+
+        <div id="slideshow">
+          <div>
+            <img src="./images/image_1.jpg" alt="" />
+          </div>
+
+          <div>
+            <img src="./images/image_2.jpg" alt="" />
+          </div>
+
+          <div>
+            <img src="./images/image_3.jpg" alt="" />
+          </div>
+
+          <div>
+            <p>Pretty cool eh? This slide is proof the content can be anything.</p>
+          </div>
+        </div>
+
+        <div id="spacer"></div>
+      
+        <div class="pop-up" id="myForm">
+          <form
+            name="myForm"
+            action=""
+            method="post"
+            onsubmit="return validateForm()"
+          >
+            <input
+              class="rsvp"
+              type="text"
+              name="fname"
+              placeholder="First Name"
+            />
+            <input
+              class="rsvp"
+              type="text"
+              name="lname"
+              placeholder="Last Name"
+            />
+            <input
+              class="rsvp"
+              type="email"
+              name="email"
+              placeholder="Email Address" 
+              required
+            />
+            <input
+              class="rsvp"
+              type="tel"
+              name="tel"
+              placeholder="123-45-6789"
+              pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" 
+              required
+            />
+            <div class="form-spacer"></div>
+            <div class="submit">
+              <input type="submit" value="Submit" />
+              <input type="submit" value="Close" onclick="closeForm()" />
+            </div>
+          </form>
+        </div>
+
+      <button class="open-button" id="contact" onclick="openForm()">Open Form</button>
+    </div>
+
+  </body>
+</html>

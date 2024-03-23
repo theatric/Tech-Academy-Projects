@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- head -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>theatric</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+        <script src="js/portfolio.js" defer></script>
+    </head>
+
+    <!-- body -->
+    <body>
+        
+        <!-- navbar -->
+        <div class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#slideshow">Slideshow</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- background video -->
+        <section id="video-section">
+            <div id="home">
+                <video autoplay muted loop id="curtain-video">
+                    <source src="images/video/curtain.mp4" type="video/mp4">
+                    <!-- display message if video fails to run -->
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+
+            <!-- hero section -->
+            <div id="hero">
+                <h1 class="glow-text">theatric</h1>
+                <strong>
+                    <h2>
+                    Powerfully dramatic web design that gets you and your projects noticed. 
+                    </h2>
+                    <img src="images/screens.jpg" alt="">
+                </strong>
+            </div>
+        
+            <!-- slideshow section -->
+            <div id="slideshow">
+                <div id="slideshow_background"> 
+                    <div id="slideshow_container">
+                        <!-- slide 1 of 6 -->
+                        <div class="mySlides fade">
+                            <img class="slideshow-image" src="images/director.png" alt="Picture of yourself">
+                            <div class="slideshow-text">Let be me the director of your entire web project.</div>
+                        </div>
+                        <!-- slide 2 of 6 -->
+                        <div class="mySlides fade">
+                            <img class="slideshow-image" src="images/camera.png" alt="HTML, CSS, and JS logos"> 
+                            <div class="slideshow-text">I will make your images sparkling and new,</div>
+                        </div>
+                        <!-- slide 3 of 6 -->
+                        <div class="mySlides fade">
+                            <img class="slideshow-image" src="images/microphone.png" alt="Python logo">
+                            <div class="slideshow-text">I will optimise and radiate your sound,</div>
+                        </div>
+                        <!-- slide 4 of 6 -->
+                        <div class="mySlides fade">
+                            <img class="slideshow-image" src="images/clapperboard.png" alt="C# logo">
+                            <div class="slideshow-text">I can edit and optimise your showreel footage</div>
+                        </div>
+                        <!-- slide 5 of 6 -->
+                        <div class="mySlides fade">
+                            <img class="slideshow-image" src="images/code.png" alt="SQL logo"> 
+                            <div class="slideshow-text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript</div>
+                        </div>
+                        <!-- slide 6 of 6 -->
+                        <div class="mySlides fade">
+                            <img class="slideshow-image" src="images/Square Custom Picture.png" alt="Replace with a picture of your choosing"> 
+                            <div class="slideshow-text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div> 
+                        </div>
+                        <!-- previous and next buttons -->
+                        <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br> <!-- adds a space between the slideshow images and the dots -->
+
+                    <!-- slideshow dots (another way of navigating through the slideshow) -->
+                    <div style="text-align: center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                        <span class="dot" onclick="currentSlide(4)"></span> 
+                        <span class="dot" onclick="currentSlide(5)"></span> 
+                        <span class="dot" onclick="currentSlide(6)"></span> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- about section -->
+        <div class="row" id="about">
+            <!-- left column -->
+            <div class="column-light">
+                <img src="images/showtime.png" alt="A woman seen from behind on a stage, facing a darkened auditorium full of people looking up at her">
+            </div>
+            <!-- right column -->
+            <div class="column-dark">
+                <h1>About</h1>
+                <p>Hi, my name is David and I'm a student in <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, where I'm learning to build websites using HTML, CSS, JavaScript, and other languages. 
+                    <br>
+                    <br>My goal is to create simple, effective websites for actors, musicians, theatre companies, and other creative professionals, helping them to showcase their talents worldwide across the internet. 
+                    <br>
+                    <br>Come back soon to view my progress, or feel free to <a href="#contact">contact</a> me using the form below if you'd like to find out more.
+                </p>
+            </div>
+        </div>
+        
+        <!-- GitHub section -->
+        <div class="row" id="github">
+            <!-- left column -->
+            <div class="column-dark">
+                <h1>GitHub</h1>
+                <p>
+                    You can view some of the coding projects I've engaged in during my training by visiting my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/theatric" target="-blank">theatric's GitHub</a></p>
+                </p>
+            </div>
+            <!-- right column -->
+            <div class="column-light">
+                <a href="https://github.com/theatric" target="_blank"><img src="images/github.png" alt="GitHub logo"></a>
+            </div>
+        </div>
+
+        <!-- contact section -->
+        <div id="contact">
+            <button onclick="openForm()" class="popup-button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/xyyrggdq" method="post" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Please enter your name here" required>
+                    <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" placeholder="Please enter your phone number here">
+                    <label>Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Please enter your email address here">
+                    <label>Message:</label>
+                        <input type="text" id="message" name="message" placeholder="Please write your message here">
+                        <button type="submit" class="btn">SUBMIT</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+            </div>
+        </div>
+
+        <!-- footer section -->
+        <footer>
+            <p class="center">&copy; theatric 2024</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,543 @@
+/*** GENERAL STYLING ***/
+/* universal */
+* {
+   box-sizing: border-box; /* ensures padding and border values are included within the width and height for every element on the page, '*' being a universal selector */
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    background-color: #000; /* sets the background colour for the whole visible page */
+    scroll-behavior: smooth;
+}
+
+/* body */
+body {
+    margin: 0%; /* ensures the site displays right to the edge of the browser screen */
+    opacity: 1; 
+    transition: opacity 3s; 
+    overflow-x: hidden;
+    user-select: none;    
+}
+
+body.faded {
+    opacity: .1;
+}
+
+h1, h2 {
+    font-family: Poppins, Roboto, sans-serif; /* specifies the font family for the heading items, with alternatives if needed */
+    font-weight: bold; /* makes the h1 and h2 text heavier than regular text */
+    text-align: center; /* centres all h1 and h2 elements */
+ }
+
+/* heading 1 elements */
+h1 {
+    font-size: 26px; /* specifies the font size of the h1 text items */
+    letter-spacing: -1px; /* brings the individual letters closer together in this larger font size */
+    text-transform: uppercase; /* displays all h1 headings in capitals */
+    color: #212427; /* sets the h1 font colour */
+    transition: transform 3s;
+}
+
+/* heading 1 elements hover effect */
+h1:hover {
+    transform: scale(1.1); /* increases the size of h1 elements by 1.1 on hover */
+}
+
+/* heading 2 elements */
+ h2 {
+    font-size: 24px; /* specifies the font size of the h2 text items */
+    color: #f5f5f5; /* sets the h2 text colour */
+ }
+
+/* hero section text */
+.glow-text {
+    font-size: 60px;
+    font-weight: bold;
+    color: #f5f5f5; /* changes the colour of the main portfolio title text */
+    -webkit-animation: glowText 3s ease-in-out infinite alternate; /* applies the "glowText" animation below for Safari 4.0 - 8.0 */
+    animation: glowText 3s ease-in-out infinite alternate; /* applies the "glowText" animation for all other browsers */
+}
+
+/* glowText animation effect makes the page's main title appear to glow */
+@keyframes glowText {
+    from {
+      text-shadow: 0 0 10px #f5f5f5, 0 0 20px #f5f5f5, 0 0 30px #3E3EA7, 0 0 40px #3E3EA7, 0 0 50px #3E3EA7, 0 0 60px #3E3EA7, 0 0 70px #3E3EA7;}
+    to {
+      text-shadow: 0 0 20px #f5f5f5, 0 0 30px #8080D7, 0 0 40px #8080D7, 0 0 50px #8080D7, 0 0 60px #8080D7, 0 0 70px #8080D7, 0 0 80px #8080D7;}
+  }
+
+  /* glowText animation effect makes the page's main title appear to glow */
+/*@keyframes glowText {
+    from {
+      text-shadow: 0 0 5px #f5f5f5, 0 0 10px #f5f5f5, 0 0 15px #3E3EA7, 0 0 20px #3E3EA7, 0 0 25px #3E3EA7, 0 0 30px #3E3EA7, 0 0 35px #3E3EA7;}
+    to {
+      text-shadow: 0 0 15px #f5f5f5, 0 0 25px #8080D7, 0 0 30px #8080D7, 0 0 35px #8080D7, 0 0 40px #8080D7, 0 0 45px #8080D7, 0 0 50px #8080D7;}
+  }
+*/
+
+/* paragraph elements */
+p {
+    font-family: Poppins, Roboto, sans-serif; /* sets the font family for all body text, with alternatives if needed */
+    text-align: left; /* left-justifies text within paragraph elements */
+    font-size: 18px; /* sets the general letter size for body text */
+    color: #212427; /* sets the colour for the body text */
+    padding: 0 20px; /* adds padding to the left and right of each paragraph element */
+}
+
+/* center class (applies to all elements with the class 'center' */
+.center {
+    text-align: center; /* centre-aligns text on the page */
+}
+
+/* image elements */
+img {
+    display: block; /* enables centering of all images within their container */
+    max-width: 100%; /* ensures all images stay within the width of their container */
+    height: 340px; /* sets the height of all images */
+    margin: 0 auto; /* centres all images within their container */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .6); /* adds a drop-shadow effect to the bottom of all images */
+    border-radius: 9px; /* gives all images slightly rounded corners */
+    filter: grayscale(75%); /* removes 75% of the colour from all images */
+    transition: transform 3s, filter 1s; /* applies the hover transformation over 1 second */
+  }
+
+/* image element hover effects */
+  img:hover {
+    filter: grayscale(5%); /* restores most of an image's colour on hover */
+    transform: scale(1.1); /* increases the size of images by 1.1 on hover */
+  }
+
+/* the @media rule is used in media queries to apply different styles for different media/types of devices */
+/* on screens 576px and smaller image height will be reduced to 100px, and the images will appear more centred vertically within their columns */
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+/*** END OF GENERAL STYLING ***/
+
+/*** NAVBAR STYLING ***/
+.navbar {
+    display: flex; /* makes the navbar a flexbox container */
+    flex-direction: row; /* makes the navbar container's main axis horizontal */
+    justify-content: flex-end; /* aligns the menu text items at the end of the navbar */
+    overflow: hidden; /* prevents any content that extends beyond the boundary of the navbar from displaying */
+    background-color: #000; /* gives the navbar a black colour */
+    position: fixed; /* fixes the navbar at the top of the screen as we scroll down the page */
+    top: 0; /* ensures no space is displayed above the navbar */
+    width: 100%; /* makes the navbar span the full width of the page */
+    z-index: 1; /* ensures no other element displays in front of the navbar */
+    -webkit-animation: moveNav 5s; /* applies the "moveNav" animation below for Safari 4.0 - 8.0 */
+    animation: moveNav 5s; /* applies the "moveNav" animation for all other browsers */
+}
+
+/* moveNav animation effect moves the navbar in from the left of the screen as the page loads */
+@keyframes moveNav {
+    from {left: -100vw;} /* positions the navbar completely off screen to the left when it starts moving */
+    to {left: 0vw;} /* moves the navbar fully into place on the screen */
+}
+
+/* navbar links */
+.navbar a {
+    color: #f5f5f5; /* colours the menu text white */
+    background-color: #8080D7; /* default background colour for each of the menu text items */
+    padding: 14px 16px; /* provides some space around the menu text items */
+    font-family: Poppins, Helvetica, sans-serif; /* specifies the font family for the menu text items, with alternatives if needed */
+    text-decoration: none; /* removes the underlines from the menu text links */
+    text-transform: uppercase; /* displays the menu text items in capital letters */
+    font-weight: bold; /* makes the menu text heavier than regular text */
+    font-size: 20px; /* specifies the font size of the menu text items */
+    text-align: center; /* centres each menu text item within its container */
+    position: relative; /* sets the text relative to its normal positioning, allowing us to see the "moveNavText" animation below */
+    -webkit-animation: moveNavText 3.5s; /* applies the 'moveNavText' animation below for Safari 4.0 - 8.0 */
+    animation: moveNavText 3.5s; /* applies the "moveNavText" animation for all other browsers */
+}
+
+/* moveNavText animation effect moves the menu text items up from beneath the navbar as the page loads */
+@keyframes moveNavText {
+    from {top: 100px;} /* sets the navbar text fully below the navbar itself when it starts moving */
+    to {top: 0px;} /* raises the navbar text up onto the navbar */
+}
+
+/* screens 576px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .navbar a {
+        width: 25%; /* makes each link take up 1/4 of the navbar */
+        font-size: 16px; /* smaller font size for smaller screens */
+        padding: 14px 0; /* removes horizontal padding so that the navbar doesn't break into two lines on smaller screens */
+    }
+}
+
+/* navbar hover effects */
+.navbar a:hover {
+    background-color: rgba(0, 0, 0, .9); /* the background colour displayed when you hover over a menu text link */
+}
+
+/* navbar home button */
+.navbar a.active {
+    background-color: rgba(0, 0, 0, .9); /* background colour for the navbar menu link with the 'active' class */
+}
+/*** END OF NAVBAR STYLING ***/
+
+/*** VIDEO STYLING ***/
+
+ #video-section {
+    min-height: 100vh;
+    background-color: rgba(50, 5, 255, 0.1); /* provides a semi-transparent background to aid legibility of the overlay text */
+}
+
+#home {
+    padding-top: 25px; /* allows some extra space between the navbar and the first heading */
+  
+}
+
+#curtain-video {
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* background video */
+#curtain-video {
+    background-color: rgba(50, 5, 255, 0.1); /* provides a semi-transparent background to aid legibility of the overlay text */
+    position: fixed; /* fixes the video to the page */
+    right: 0; /* ensures there is no space between the edge of the video and the edge of the page */
+    top: 0; /* ensures there is no space between the top of the video and the top of the page */
+    min-width: 100%; /* ensures the video is displayed across the full width of the page */
+    z-index: -1; /* places the video behind the other elements on the page */
+}
+
+/* removal of background video for screens 576px and smaller */
+@media screen and (max-width: 576px) {
+    #curtain-video {
+        display: none;
+    }
+}
+
+/* video overlay text */
+#hero {
+    width: 100%; /* ensures the overlay text container completely fills the width of the video */
+    height: 100vh;
+    padding: 50px; /* provides some space around the overlay text */
+    position: relative; /* sets the overlay text relative to its normal position, allowing us to use the "moveVideoText" animation below */
+    -webkit-animation: moveOverlayText 5.75s; /* applies the 'moveOverlayText animation below for Safari 4.0 - 8.0 */
+    animation: moveOverlayText 5.75s; /* applies the "moveOverlayText" animation for all other browsers */
+}
+
+#hero img {
+    margin-top: 75px;
+    width: 50vw;
+    height: auto;
+    -webkit-animation: glowPic 3s ease-in-out infinite alternate; /* applies the "glowText" animation below for Safari 4.0 - 8.0 */
+    animation: glowPic 3s ease-in-out infinite alternate; /* applies the "glowText" animation for all other browsers */
+}
+
+@keyframes glowPic {
+    from {
+      box-shadow: 0 0 10px #f5f5f5, 0 0 20px #f5f5f5, 0 0 30px #3E3EA7, 0 0 40px #3E3EA7, 0 0 50px #3E3EA7, 0 0 60px #3E3EA7, 0 0 70px #3E3EA7;}
+    to {
+     box-shadow: 0 0 20px #f5f5f5, 0 0 30px #8080D7, 0 0 40px #8080D7, 0 0 50px #8080D7, 0 0 60px #8080D7, 0 0 70px #8080D7, 0 0 80px #8080D7;}
+  }
+    
+ /* @keyframes glowPic {
+    from {
+      box-shadow: 0 0 5px #f5f5f5, 0 0 10px #f5f5f5, 0 0 15px #3E3EA7, 0 0 20px #3E3EA7, 0 0 25px #3E3EA7, 0 0 30px #3E3EA7, 0 0 35px #3E3EA7;}
+    to {
+      box-shadow: 0 0 15px #f5f5f5, 0 0 25px #8080D7, 0 0 30px #8080D7, 0 0 35px #8080D7, 0 0 40px #8080D7, 0 0 45px #8080D7, 0 0 50px #8080D7;}
+  }*/
+
+@keyframes moveOverlayText {
+    from {top: -100vw;} /* sets the position of the overlay text above the viewport as the page starts loading */
+    to {top: 0vw;} /* moves the overlay text down to its normal positioning on the viewport */
+}
+
+#hero p {
+    color: #f5f5f5; /* overrides the colour of the paragraph text for this section */
+}
+
+/*** SLIDESHOW STYLING ***/
+
+#slideshow_background {
+    background: rgba(255, 255, 255, 0.35); /* This creates a slightly transparent white background that's placed over the video in the background */    
+}
+
+.mySlides {
+    display: block;
+}
+
+#slideshow_container {
+    position: relative;
+    margin: 0 auto;
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%; 
+}
+
+#slideshow_container a {
+    text-decoration: none;
+}
+
+.slideshow-image {
+    min-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .6);
+}
+
+.slideshow-image:hover {
+    transform: none;
+}
+
+.previous, .next {
+    position: absolute; 
+    width: auto;
+    top: 50%;
+    padding: 2vw;
+    color: #a9a9a9;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer; 
+    user-select: none;
+    transition: .6s ease;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.previous:hover, .next:hover {
+    background-color: rgba(0, 0, 0, .8);
+    color: #f9f9f9; 
+}
+
+.slideshow-text {
+    position: absolute; 
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 0 0 7px 7px;
+    padding: 1vw;
+    text-align: center;
+    font-family: Poppins, Roboto, sans-serif;
+    font-size: 1.5vw;
+    font-weight: bold;
+    letter-spacing: .1vw;
+    color: #f9f9f9;
+}
+
+.dot {
+    display: inline-block;
+    height: 1vw;
+    width: 1vw; 
+    margin: 1vw .25vw 2vw .25vw;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+    cursor: pointer; 
+    user-select: none;
+    transition: background-color .6s ease;
+    z-index: 1;    
+}
+
+.active, .dot:hover {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s; 
+    -webkit-animation-name: fade;
+    -webkit-animation-name: 1.5s; 
+}
+
+@keyframes fade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+
+.fade img {
+    filter: none;
+}
+
+/* END SLIDESHOW STYLING */
+
+/*** MAIN CONTENT STYLING ***/
+/* row styling */
+.row {
+    display: flex; /* makes the row a flexbox container */
+    flex-direction: row; /* makes the row container's main axis horizontal */
+}
+
+/* column styling */
+.column-light {
+    width: 50%;  /* makes the column take up exactly half of the page width */
+    padding: 50px; /* gives the column 50px padding on all sides */
+    height: 450px; /* sets the height of the column */
+    background-color: #f5f5f5; /* background colour for columns containing images */
+}
+.column-dark {
+    width: 50%; /* makes the column take up exactly half of the page width */
+    padding: 50px; /* gives the column 50px padding on all sides */
+    height: 450px; /* sets the height of the column */
+    background-color: #e0e0e0; /* background colour for columns containing text */ 
+}
+
+.column-tall { 
+    height: 500px; /* additional styling for columns in the final row, overriding the height to give more room for the contact form while keeping the rest of the formatting from the columns above */
+}
+/*** END OF MAIN CONTENT STYLING ***/
+
+/*** CONTACT FORM STYLING ***/
+
+.popup-button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 20vw;
+    border-radius: 7px;
+    background-color: #8080D7; /* sets the background colour of the submit button */
+    color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    cursor: pointer; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .6); /* creates an internal shadow inside the text box on hover */
+    animation: movePopup 3.5s; /* Animation set for 5 seconds */
+    -webkit-animation: movePopup 3.5s; /* Animation for 5 seconds for Safari 4.0-8.0 */
+}
+
+@keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+.form-popup {
+    display: none;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500; 
+}
+
+/* form element */
+.form-container {
+    max-width: 49vw;
+    padding: 1vw;
+    border-radius: 5px; /* slightly rounds the corners of the contact form */
+    background-color: #8080D7; /* background colour for the form as a whole */
+    border: 1px solid #f9f9f9;
+    padding: 15px; /*  gives the contact form 10px padding on all sides */
+    font-family: Poppins, Roboto, sans-serif; /* sets the font family for the contact form, with alternatives if needed */
+    font-weight: 600;
+    color: #f9f9f9; /* sets the colour for the form text */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .6); 
+}
+
+.form-container h1 {
+    font-weight: bold;
+    color: #f9f9f9;
+}
+/* form text input boxes */
+.form-container input[type=text],
+.form-container input[type=email] {
+    width: 100%; /* each input box covers the full width of the container */
+    padding: 12px; /* adds padding within each text box on the form */
+    border: 1px solid #ccc; /* sets a solid border and colour to each text box */
+    border-radius: 4px; /* slightly rounds the corners of the text box border */
+    margin: 6px 0 16px; /* adds a margins to the top and bottom of each text box */
+}
+
+/* form text input boxes hover effect */
+.form-container input[type=text]:hover,
+.form-container input[type=email]:hover {
+    box-shadow: 0 0 3px #3d3d3d inset; /* creates an internal shadow inside the text box on hover */
+}
+
+button {
+    width: 100%;
+     height: auto;
+     font-family: Poppins, Roboto, sans-serif;
+     font-size: 1vw;
+     font-weight: bold;
+     padding: 1vw;
+     color: #212427; /* sets the colour for the body text */
+ }
+
+ button:hover, .form-container .btn:hover {
+    color: #f9f9f9;
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.form-container .btn {
+    background-color: white; 
+    color: rgba(0, 0, 0, .9);
+    border-color: rgba(0, 0, 0, .9);
+    border-radius: 7px;
+    margin-bottom: 1vh; /* Adds space between the submit button and the close button */
+    cursor: pointer;
+}
+
+/* Close button */
+.form-container .cancel {
+    background-color: rgba(0, 0, 0 , .9);
+    color: white;
+    border-color: gray;
+}
+
+/* Styling for close button on hover */
+.form-container .cancel:hover {
+    color: white;
+    background-color: darkred;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: rgba(0, 0, 0, .9);
+}
+/* submit button */
+.form-container input[type=submit] {
+    display: block; /* enables centering of the submit button within its container */
+    margin: 0 auto; /* centres the submit button */
+    padding: 12px 10px; /* adds padding to the submit button */
+    background-color: #8080D7; /* sets the background colour of the submit button */
+    color: #f5f5f5; /* font colour for the submit button text */
+    text-transform: uppercase; /* displays the submit button text in capitals */
+    letter-spacing: 1px; /* pushes the letters of the submit button text a little further apart */
+    font-weight: bold; /* makes the text of the submit button bold */
+    border: 1px solid #8080D7; /* removes the border from the submit button */
+    border-radius: 4px; /* gives the submit button the same rounded corners as the input boxes */
+    cursor: pointer; /* changes the cursor icon to a pointer when over the submit button */
+}
+
+/* submit button hover effect */
+input[type=submit]:hover {
+    background-color: #f5f5f5; /* switches the background colour of the submit button on hover */
+    color: #8080D7; /* switches the font colour for the submit button text on hover */
+    transform: scale(1.1); /* makes the button increase 1.1 times in size on hover */
+    transition: transform 1.5s; /* makes the transform effect last 1.5 seconds */
+}
+/*** END OF CONTACT FORM STYLING ***/
+
+ /* footer element */
+ footer {
+    border-top: 1px solid red;
+    max-height: 100px;
+    padding: 20px; /* gives the footer area 2% padding on all sides */
+    background-color: #8080D7; /* sets the background colour for the footer area only */
+}
+
+ footer p {
+    color: #f5f5f5; /* font colour for text in the footer area */
+}
