@@ -1,13 +1,13 @@
 # JavaScript Projects
 A repository of Tech Academy coursework built using HTML, CSS and JavaScript, with introductions to AJAX, jQuery, XML, and React. Amongst the assortment of drills and exercises are the following self-contained projects:
 
-- [Tic Tac Toe](JavaScript-Projects/Tic-Tac-Toe-Project/tictactoe.html)
-- [Calculator](JavaScript-Projects/Calculator-Project/calculator.html)
-- [Pizza Menu Project](JavaScript-Projects/Pizza-Menu-Project/pizza.html)
-- [One-Page Website (Celtic Tours)](JavaScript-Projects/One-Page-Website/index.html)
-- [Bootstrap4 Project (Academy Cinemas)](JavaScript-Projects/Bootstrap4-Project/academy_cinemas.html)
-- [To-Do App](JavaScript-Projects/To-Do-App-Project/index.html)
-- [Personal Portfolio Website](JavaScript-Projects/Personal-Portfolio-Website/index.html)
+- [Tic Tac Toe](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Tic-Tac-Toe-Project)
+- [Calculator](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Calculator-Project/calculator.html)
+- [Pizza Menu Project](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Pizza-Menu-Project/pizza.html)
+- [One-Page Website (Celtic Tours)](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/One-Page-Website/index.html)
+- [Bootstrap4 Project (Academy Cinemas)](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Bootstrap4-Project/academy_cinemas.html)
+- [To-Do App](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/To-Do-App-Project/index.html)
+- [Personal Portfolio Website](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Personal-Portfolio-Website/index.html)
 
 ### Tic Tac Toe
 A simple back-and-forth browser game where the player competes with the web browser to complete a line of three symbols (either Xs or an Os) horizontally, vertically, or diagonally on a nine-square grid. The contest is enhanced with sound effects and animation.
