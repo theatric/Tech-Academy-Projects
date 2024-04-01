@@ -3,13 +3,31 @@ A repository of Tech Academy coursework built using HTML, CSS and JavaScript. Am
 
 - [Tic Tac Toe ](JavaScript-Projects/Tic-Tac-Toe-Project/tictactoe.html)
 - [Calculator](JavaScript-Projects/Calculator-Project/calculator.html)
-- Pizza Menu Project 
+- [Pizza Menu Project](JavaScript-Projects/Pizza-Menu-Project/pizza.html)
+- [One-Page Website (Celtic Tours)](JavaScript-Projects/One-Page-Website/index.html)
+- [Bootstrap4 Project (Academy Cinemas)](JavaScript-Projects/Bootstrap4-Project/academy_cinemas.html)
+- [To-Do App ](JavaScript-Projects/To-Do-App-Project/index.html)
+- Personal Portfolio Website
 
 ### Tic Tac Toe
 A simple browser game where the player competes with the computer to complete a line of three symbols (either Xs or an Os) horizontally, vertically, or diagonally on a nine-square grid. The contest is enhanced with sound effects and animation.
 
 ### Calculator 
 An impressive four-function calculator enabling the user to perform basic mathematical operations via a familiar digital interface created in the browser window.
+
+### Pizza Menu
+A mock-up of a food ordering system allowing the user to select from a diverse array of pizza base sizes and toppings before calculating the total cost. 
+
+### One-Page Website (Celtic Tours)
+A development of the tour guide site built in a previous course, enhanced by the addition of an elegant lightbox image gallery. 
+
+### Bootstrap4 Project (Academy Cinemas) 
+An extension of the earlier cinema listings page, adding jQuery to enhance functionality. 
+
+###To-Do App 
+A simple task management tool, allowing the user to add items to a list of tasks to be done and delete them once they've been completed. 
+
+
 
 
 
