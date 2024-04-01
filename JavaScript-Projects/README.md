@@ -18,7 +18,7 @@ An impressive four-function calculator enabling the user to perform basic mathem
 ### Pizza Menu
 A mock-up of a food ordering system allowing the user to select from a diverse array of pizza base sizes and toppings before calculating and delivering the total cost. 
 
-### One-Page Website (Celtic Tours)
+### One-Page Website (Adrian Metcalfe Celtic Tours)
 A development of the tour guide site built in a previous course, enhanced by the addition of an elegant lightbox image gallery. 
 
 ### Bootstrap4 Project (Academy Cinemas) 
