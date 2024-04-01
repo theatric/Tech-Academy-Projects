@@ -4,7 +4,7 @@ A repository of Tech Academy coursework built using HTML, CSS and JavaScript, wi
 - [Tic Tac Toe](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Tic-Tac-Toe-Project/tictactoe.html)
 - [Calculator](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Calculator-Project/calculator.html)
 - [Pizza Menu Project](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Pizza-Menu-Project/pizza.html)
-- [One-Page Website (Celtic Tours)](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/One-Page-Website/index.html)
+- [One-Page Website (Adrian Metcalfe Celtic Tours)](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/One-Page-Website/index.html)
 - [Bootstrap4 Project (Academy Cinemas)](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Bootstrap4-Project/academy_cinemas.html)
 - [To-Do App](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/To-Do-App-Project/index.html)
 - [Personal Portfolio Website](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Personal-Portfolio-Website/index.html)
