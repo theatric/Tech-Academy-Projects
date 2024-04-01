@@ -1,7 +1,7 @@
 # JavaScript Projects
 A repository of Tech Academy coursework built using HTML, CSS and JavaScript, with introductions to AJAX, jQuery, XML, and React. Amongst the assortment of drills and exercises are the following self-contained projects:
 
-- [Tic Tac Toe](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Tic-Tac-Toe-Project)
+- [Tic Tac Toe](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Tic-Tac-Toe-Project/tictactoe.html)
 - [Calculator](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Calculator-Project/calculator.html)
 - [Pizza Menu Project](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Pizza-Menu-Project/pizza.html)
 - [One-Page Website (Celtic Tours)](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/One-Page-Website/index.html)
