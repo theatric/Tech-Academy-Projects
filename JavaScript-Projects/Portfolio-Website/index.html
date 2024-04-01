@@ -4,8 +4,9 @@
     <!-- head -->
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>theatric</title>
+        <link rel="shortcut icon" type="img/jpg" href="images/favicon.png">
         <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
         <script src="js/portfolio.js" defer></script>
     </head>
@@ -14,12 +15,13 @@
     <body>
         
         <!-- navbar -->
-        <div class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#slideshow">Slideshow</a>
-            <a href="#about">About</a>
-            <a href="#github">GitHub</a>
-            <a href="#contact">Contact</a>
+        <div id="navbar">
+            <a href="#home" class="btn active">Home</a>
+            <a href="#slideshow" class="btn">Slideshow</a>
+            <a href="#about" class="btn">About</a>
+            <a href="#github" class="btn">GitHub</a>
+            <!-- onclick and ondblclick functions added to open and close the contact form-->
+            <a onclick="openForm()" ondblclick="closeForm()" class="btn contact">Contact</a>
         </div>
 
         <!-- background video -->
@@ -35,47 +37,43 @@
             <!-- hero section -->
             <div id="hero">
                 <h1 class="glow-text">theatric</h1>
-                <strong>
-                    <h2>
-                    Powerfully dramatic web design that gets you and your projects noticed. 
-                    </h2>
-                    <img src="images/screens.jpg" alt="">
-                </strong>
+                <img src="images/screens.jpg" alt="computer screens of various sizes displaying the same image of a woman seen from behind facing an audience">
+                <p id="tagline">Powerfully dramatic web design that gets you and your work noticed.</p>
             </div>
         
             <!-- slideshow section -->
             <div id="slideshow">
-                <div id="slideshow_background"> 
-                    <div id="slideshow_container">
+                <div id="slideshow-background"> 
+                    <div id="slideshow-container">
                         <!-- slide 1 of 6 -->
                         <div class="mySlides fade">
-                            <img class="slideshow-image" src="images/director.png" alt="Picture of yourself">
-                            <div class="slideshow-text">Let be me the director of your entire web project.</div>
+                            <img class="slideshow-image" src="images/director.png" alt="a director's chair">
+                            <div class="slideshow-text">Let me create a multimedia masterpiece,</div>
                         </div>
                         <!-- slide 2 of 6 -->
                         <div class="mySlides fade">
-                            <img class="slideshow-image" src="images/camera.png" alt="HTML, CSS, and JS logos"> 
-                            <div class="slideshow-text">I will make your images sparkling and new,</div>
+                            <img class="slideshow-image" src="images/camera.png" alt="an antique folding camera"> 
+                            <div class="slideshow-text">with stunning, high-resolution images,</div>
                         </div>
                         <!-- slide 3 of 6 -->
                         <div class="mySlides fade">
-                            <img class="slideshow-image" src="images/microphone.png" alt="Python logo">
-                            <div class="slideshow-text">I will optimise and radiate your sound,</div>
+                            <img class="slideshow-image" src="images/microphone.png" alt="a radio microphone">
+                            <div class="slideshow-text">breathtaking, crystal-clear sound,</div>
                         </div>
                         <!-- slide 4 of 6 -->
                         <div class="mySlides fade">
-                            <img class="slideshow-image" src="images/clapperboard.png" alt="C# logo">
-                            <div class="slideshow-text">I can edit and optimise your showreel footage</div>
+                            <img class="slideshow-image" src="images/clapperboard.png" alt="a clapperboard">
+                            <div class="slideshow-text">and compelling, dynamic video,</div>
                         </div>
                         <!-- slide 5 of 6 -->
                         <div class="mySlides fade">
-                            <img class="slideshow-image" src="images/code.png" alt="SQL logo"> 
-                            <div class="slideshow-text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript</div>
+                            <img class="slideshow-image" src="images/code.png" alt="a gold coding symbol"> 
+                            <div class="slideshow-text">all expertly coded from scratch.</div>
                         </div>
                         <!-- slide 6 of 6 -->
                         <div class="mySlides fade">
                             <img class="slideshow-image" src="images/Square Custom Picture.png" alt="Replace with a picture of your choosing"> 
-                            <div class="slideshow-text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div> 
+                            <div class="slideshow-text">Contact me now!</div> 
                         </div>
                         <!-- previous and next buttons -->
                         <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
@@ -84,8 +82,8 @@
                     <br> <!-- adds a space between the slideshow images and the dots -->
 
                     <!-- slideshow dots (another way of navigating through the slideshow) -->
-                    <div style="text-align: center">
-                        <span class="dot" onclick="currentSlide(1)"></span>
+                    <div class="center">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
                         <span class="dot" onclick="currentSlide(2)"></span>
                         <span class="dot" onclick="currentSlide(3)"></span> 
                         <span class="dot" onclick="currentSlide(4)"></span> 
@@ -97,19 +95,20 @@
         </section>
         
         <!-- about section -->
-        <div class="row" id="about">
+        <div id="about">
+        <div class="row">
             <!-- left column -->
             <div class="column-light">
-                <img src="images/showtime.png" alt="A woman seen from behind on a stage, facing a darkened auditorium full of people looking up at her">
+                <img src="images/showtime.png" alt="a woman seen from behind on a stage, facing a darkened auditorium full of people looking up at her">
             </div>
             <!-- right column -->
             <div class="column-dark">
-                <h1>About</h1>
+                <h2>About</h2>
                 <p>Hi, my name is David and I'm a student in <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, where I'm learning to build websites using HTML, CSS, JavaScript, and other languages. 
                     <br>
                     <br>My goal is to create simple, effective websites for actors, musicians, theatre companies, and other creative professionals, helping them to showcase their talents worldwide across the internet. 
                     <br>
-                    <br>Come back soon to view my progress, or feel free to <a href="#contact">contact</a> me using the form below if you'd like to find out more.
+                    <br>Come back soon to view my progress, or feel free to <a onclick="openForm()" ondblclick="closeForm()" class="contact">contact</a> me if you'd like to find out more.
                 </p>
             </div>
         </div>
@@ -118,35 +117,35 @@
         <div class="row" id="github">
             <!-- left column -->
             <div class="column-dark">
-                <h1>GitHub</h1>
-                <p>
-                    You can view some of the coding projects I've engaged in during my training by visiting my GitHub profile here:
-                    <br>
+                <h2>GitHub</h2>
+                <p>You can view some of the coding projects I've engaged in during my training by visiting my GitHub profile here:</p>
                     <p class="center"><a href="https://github.com/theatric" target="-blank">theatric's GitHub</a></p>
-                </p>
+
             </div>
             <!-- right column -->
             <div class="column-light">
                 <a href="https://github.com/theatric" target="_blank"><img src="images/github.png" alt="GitHub logo"></a>
             </div>
         </div>
+    </div>
 
         <!-- contact section -->
         <div id="contact">
             <button onclick="openForm()" class="popup-button">CONTACT</button>
             <div class="form-popup" id="myForm">
                 <form action="https://formspree.io/f/xyyrggdq" method="post" class="form-container">
-                    <h1>Contact</h1>
+                    <h2>Contact</h2>
                     <label for="name">Name:</label>
                         <input type="text" id="name" name="name" placeholder="Please enter your name here" required>
                     <label for="phone">Phone:</label>
                         <input type="text" id="phone" name="phone" placeholder="Please enter your phone number here">
                     <label>Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Please enter your email address here">
+                        <input type="email" id="email" name="email" placeholder="Please enter your email address here" required>
                     <label>Message:</label>
-                        <input type="text" id="message" name="message" placeholder="Please write your message here">
-                        <button type="submit" class="btn">SUBMIT</button>
-                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                        <input type="text" id="message" name="message" placeholder="Please type your message here">
+                        
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
             </form>
             </div>
         </div>

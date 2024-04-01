@@ -45,21 +45,25 @@ function show() {
     html += '</ul>';
     // this displays the tasks as a list 
     document.getElementById('tasks').innerHTML = html;
+    // ths tells the browser how to display the task array after an item has been removed
+    var buttons = document.getElementsByClassName('remove');
+    for (var i = 0; i <buttons.length; i++) {
+        buttons[i].addEventListener('click', remove);
+    };
 }
 // this displays the inputted task when the 'Add Item' button is clicked 
 document.getElementById('add').addEventListener('click', add);
 // this will keep the inputs displayed permanently on the screen 
 show();
 
+// this creates the functionality of removing a to-do item from the array */
+function remove() {
+    var id = this.getAttribute('id');
+    var tasks = get_tasks();
+    tasks.splice(id, 1);
+    localStorage.setItem('task', JSON.stringify(tasks));
+    // this looks in the show() how to display a removed item on the screen
+    show();
 
-
-
-//var dog = {name: "Toby", breed: "Yorkshire Terrier", color: "brown", age: "3"};
-
-//var dog = '{"name": "Toby", "breed": "Yorkshire Terrier", "color": "brown", "age": "3"}';
-
-//var JSONstring = JSON.stringify(dog);
-//document.getElementById("myDog").innerHTML = JSONstring;
-
-//var JSONstring = JSON.parse(dog);
-//document.getElementById("yourDog").innerHTML = JSONstring.name + " the " + JSONstring.color + " " + JSONstring.breed + ".";
+    return false;
+}

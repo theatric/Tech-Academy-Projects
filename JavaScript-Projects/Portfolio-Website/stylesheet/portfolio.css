@@ -1,543 +1,699 @@
 /*** GENERAL STYLING ***/
+
 /* universal */
 * {
-   box-sizing: border-box; /* ensures padding and border values are included within the width and height for every element on the page, '*' being a universal selector */
+  margin: 0; /* removes default margin from all elements */
+  padding: 0; /* removes default padding from all elements */
+  box-sizing: border-box; /* ensures padding and border values are included within the width and height for every element on the page */
 }
 
-*:focus {
-    outline: none;
-}
-
+/* affects the entire document */
 html {
-    background-color: #000; /* sets the background colour for the whole visible page */
-    scroll-behavior: smooth;
+  scroll-behavior: smooth; /* ensures page scrolling is smooth when navigating to bookmarks */
 }
 
 /* body */
 body {
-    margin: 0%; /* ensures the site displays right to the edge of the browser screen */
-    opacity: 1; 
-    transition: opacity 3s; 
-    overflow-x: hidden;
-    user-select: none;    
+  background-color: #212427; /* sets the background colour for the whole visible page */
+  opacity: 1; /* the page is fully opaque on completion of the JavaScript fade-in effect as the page loads */
+  transition: opacity 3s; /* sets the timing of the JavaScript fade-in effect */
+  overflow-x: hidden; /* prevents the appearance of horizontal scroll bars if the page content gets too wide unintentionally */
+  font-family: Poppins, Roboto, sans-serif; /* specifies the font family for the website, with alternatives if needed */
+  user-select: none; /* prevents the text on the page from being highlighted by the user */
 }
 
+/* provides a starting point for the JavaScript fade-in effect that occurs as the page is loading */
 body.faded {
-    opacity: .1;
+  opacity: .1; /* sets the level of opacity at the start of page load */
 }
 
-h1, h2 {
-    font-family: Poppins, Roboto, sans-serif; /* specifies the font family for the heading items, with alternatives if needed */
-    font-weight: bold; /* makes the h1 and h2 text heavier than regular text */
-    text-align: center; /* centres all h1 and h2 elements */
- }
+/* heading elements */
+h1,
+h2 {
+  text-align: center; /* centres all h1 and h2 elements */
+  font-weight: bold; /* makes the h1 and h2 text heavier than regular text */
+  text-transform: uppercase; /* displays all h1 and h2 headings in capitals */
+  transition: transform 3s; /* sets the timing for h1 transformations on and off hover */
+}
 
-/* heading 1 elements */
+/* heading elements hover effect */
+h1:hover,
+h2:hover {
+  transform: scale(1.1); /* increases the size of h1 elements by a tenth on hover */
+}
+
+/* main heading element */
 h1 {
-    font-size: 26px; /* specifies the font size of the h1 text items */
-    letter-spacing: -1px; /* brings the individual letters closer together in this larger font size */
-    text-transform: uppercase; /* displays all h1 headings in capitals */
-    color: #212427; /* sets the h1 font colour */
-    transition: transform 3s;
+  margin-top: 5vh; /* creates some extra space between the site's main title and the navigation */
+  color: #f5f5f5; /* changes the colour of the main portfolio title text */
+  font-size: 4.5vw; /* a much larger font size for the portfolio site's main heading, equal to 4.5% of the viewport width */
+  letter-spacing: -3px; /* brings the individual letters closer together in this larger font size */
 }
 
-/* heading 1 elements hover effect */
-h1:hover {
-    transform: scale(1.1); /* increases the size of h1 elements by 1.1 on hover */
-}
-
-/* heading 2 elements */
- h2 {
-    font-size: 24px; /* specifies the font size of the h2 text items */
-    color: #f5f5f5; /* sets the h2 text colour */
- }
-
-/* hero section text */
+/* hero section heading */
 .glow-text {
-    font-size: 60px;
-    font-weight: bold;
-    color: #f5f5f5; /* changes the colour of the main portfolio title text */
-    -webkit-animation: glowText 3s ease-in-out infinite alternate; /* applies the "glowText" animation below for Safari 4.0 - 8.0 */
-    animation: glowText 3s ease-in-out infinite alternate; /* applies the "glowText" animation for all other browsers */
+  -webkit-animation: glowText 3s ease-in-out infinite alternate; /* applies the "glowText" animation defined below for Safari 4.0 - 8.0 */
+  animation: glowText 3s ease-in-out infinite alternate; /* applies the "glowText" animation for all other browsers */
 }
 
-/* glowText animation effect makes the page's main title appear to glow */
+/* glowText animation effect makes the page's main title appear to glow, using multiple stacked and coloured shadow effects together with animation */
 @keyframes glowText {
-    from {
-      text-shadow: 0 0 10px #f5f5f5, 0 0 20px #f5f5f5, 0 0 30px #3E3EA7, 0 0 40px #3E3EA7, 0 0 50px #3E3EA7, 0 0 60px #3E3EA7, 0 0 70px #3E3EA7;}
-    to {
-      text-shadow: 0 0 20px #f5f5f5, 0 0 30px #8080D7, 0 0 40px #8080D7, 0 0 50px #8080D7, 0 0 60px #8080D7, 0 0 70px #8080D7, 0 0 80px #8080D7;}
+  from {
+    text-shadow: 0 0 5px #f5f5f5, 0 0 10px #f5f5f5, 0 0 15px #3e3ea7,
+      0 0 20px #3e3ea7, 0 0 25px #3e3ea7, 0 0 30px #3e3ea7, 0 0 35px #3e3ea7;
   }
+  to {
+    text-shadow: 0 0 10px #f5f5f5, 0 0 15px #8080d7, 0 0 20px #8080d7,
+      0 0 25px #8080d7, 0 0 30px #8080d7, 0 0 35px #8080d7, 0 0 40px #8080d7;
+  }
+}
 
-  /* glowText animation effect makes the page's main title appear to glow */
-/*@keyframes glowText {
-    from {
-      text-shadow: 0 0 5px #f5f5f5, 0 0 10px #f5f5f5, 0 0 15px #3E3EA7, 0 0 20px #3E3EA7, 0 0 25px #3E3EA7, 0 0 30px #3E3EA7, 0 0 35px #3E3EA7;}
-    to {
-      text-shadow: 0 0 15px #f5f5f5, 0 0 25px #8080D7, 0 0 30px #8080D7, 0 0 35px #8080D7, 0 0 40px #8080D7, 0 0 45px #8080D7, 0 0 50px #8080D7;}
-  }
-*/
+/* sub-headings */
+h2 {
+  font-size: 1.75vw; /* relative font sizing for the h2 text items equal to 1.75% of the viewport width */
+  color: #212427; /* sets the h2 font colour */
+  margin-bottom: 1vh; /* creates a little extra space between the page's sub-headings and the body text, equal to 1% of the viewport height */
+}
 
 /* paragraph elements */
 p {
-    font-family: Poppins, Roboto, sans-serif; /* sets the font family for all body text, with alternatives if needed */
-    text-align: left; /* left-justifies text within paragraph elements */
-    font-size: 18px; /* sets the general letter size for body text */
-    color: #212427; /* sets the colour for the body text */
-    padding: 0 20px; /* adds padding to the left and right of each paragraph element */
+  text-align: left; /* left-justifies text within paragraph elements */
+  font-size: 1vw; /* relative font size equal to 1% of the viewport width */
+  color: #212427; /* sets the colour for the body text */
+  padding: 0 1.2vw; /* adds relative padding equal to 1.2% of the viewport width to the left and right of each paragraph element, with no padding added above or below */
+}
+
+/* tagline element */
+#tagline {
+  text-align: center; /* centre-aligns the text on the page */
+  font-size: 1.5vw; /* relative font sizing for the tagline equal to 1.6% of the viewport width */
+  font-weight: bold; /* makes the tagline text heavier than regular text */
+  color: #f5f5f5; /* sets the tagline font colour */
 }
 
 /* center class (applies to all elements with the class 'center' */
 .center {
-    text-align: center; /* centre-aligns text on the page */
+  text-align: center; /* centre-aligns text on the page */
+}
+
+/* anchor elements */
+a {
+  color: #212427; /* overrides the browser's default colour for links */
+  cursor: pointer; /* changes the cursor icon to a pointer on hover or click */
+  text-decoration: underline; /* ensures all links are underlined */
 }
 
 /* image elements */
 img {
-    display: block; /* enables centering of all images within their container */
-    max-width: 100%; /* ensures all images stay within the width of their container */
-    height: 340px; /* sets the height of all images */
-    margin: 0 auto; /* centres all images within their container */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .6); /* adds a drop-shadow effect to the bottom of all images */
-    border-radius: 9px; /* gives all images slightly rounded corners */
-    filter: grayscale(75%); /* removes 75% of the colour from all images */
-    transition: transform 3s, filter 1s; /* applies the hover transformation over 1 second */
-  }
+  display: block; /* enables centering of all images within their container */
+  max-width: 100%; /* ensures all images stay within the width of their container */
+  height: 20vw; /* sets the height of all standard images */
+  margin: 0 auto; /* centres all images within their container */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .6); /* adds a subtle drop-shadow effect to the bottom of all images */
+  border-radius: 9px; /* gives all images slightly rounded corners */
+  filter: grayscale(75%); /* removes 75% of the colour from all images */
+  transition: transform 3s, filter 1s; /* applies the on-hover size and colour transitions lasting 3 seconds and 1 second respectively */
+}
 
 /* image element hover effects */
-  img:hover {
-    filter: grayscale(5%); /* restores most of an image's colour on hover */
-    transform: scale(1.1); /* increases the size of images by 1.1 on hover */
-  }
-
-/* the @media rule is used in media queries to apply different styles for different media/types of devices */
-/* on screens 576px and smaller image height will be reduced to 100px, and the images will appear more centred vertically within their columns */
-@media screen and (max-width: 576px) {
-    img {
-        height: 100px;
-        margin-top: 150px;
-    }
+img:hover {
+  filter: grayscale(5%); /* restores most of an image's colour on hover */
+  transform: scale(1.1); /* increases the size of images by a tenth on hover */
 }
 
 /*** END OF GENERAL STYLING ***/
 
 /*** NAVBAR STYLING ***/
-.navbar {
-    display: flex; /* makes the navbar a flexbox container */
-    flex-direction: row; /* makes the navbar container's main axis horizontal */
-    justify-content: flex-end; /* aligns the menu text items at the end of the navbar */
-    overflow: hidden; /* prevents any content that extends beyond the boundary of the navbar from displaying */
-    background-color: #000; /* gives the navbar a black colour */
-    position: fixed; /* fixes the navbar at the top of the screen as we scroll down the page */
-    top: 0; /* ensures no space is displayed above the navbar */
-    width: 100%; /* makes the navbar span the full width of the page */
-    z-index: 1; /* ensures no other element displays in front of the navbar */
-    -webkit-animation: moveNav 5s; /* applies the "moveNav" animation below for Safari 4.0 - 8.0 */
-    animation: moveNav 5s; /* applies the "moveNav" animation for all other browsers */
+
+/* navigation links */
+#navbar {
+  display: flex; /* makes the navbar a flexbox container */
+  flex-direction: row; /* makes the navbar container's main axis horizontal */
+  justify-content: flex-end; /* aligns the menu text items at the end of the navbar */
+  overflow: hidden; /* prevents any content that extends beyond the boundary of the navbar from displaying */
+  background-color: #121212; /* gives the navbar a near-black colour */
+  position: fixed; /* fixes the navbar at the top of the screen as we scroll down the page */
+  top: 0; /* ensures no space is displayed above the navbar */
+  width: 100%; /* makes the navbar span the full width of the page */
+  z-index: 1; /* ensures no other element displays in front of the navbar */
+  -webkit-animation: moveNav 5s; /* applies the "moveNav" animation defined below for Safari 4.0 - 8.0 */
+  animation: moveNav 5s; /* applies the "moveNav" animation for all other browsers */
 }
 
 /* moveNav animation effect moves the navbar in from the left of the screen as the page loads */
 @keyframes moveNav {
-    from {left: -100vw;} /* positions the navbar completely off screen to the left when it starts moving */
-    to {left: 0vw;} /* moves the navbar fully into place on the screen */
+  from {
+    left: -100vw;
+  } /* positions the navbar completely off screen to the left when it starts moving */
+  to {
+    left: 0vw;
+  } /* moves the navbar fully into place on the screen */
 }
 
 /* navbar links */
-.navbar a {
-    color: #f5f5f5; /* colours the menu text white */
-    background-color: #8080D7; /* default background colour for each of the menu text items */
-    padding: 14px 16px; /* provides some space around the menu text items */
-    font-family: Poppins, Helvetica, sans-serif; /* specifies the font family for the menu text items, with alternatives if needed */
-    text-decoration: none; /* removes the underlines from the menu text links */
-    text-transform: uppercase; /* displays the menu text items in capital letters */
-    font-weight: bold; /* makes the menu text heavier than regular text */
-    font-size: 20px; /* specifies the font size of the menu text items */
-    text-align: center; /* centres each menu text item within its container */
-    position: relative; /* sets the text relative to its normal positioning, allowing us to see the "moveNavText" animation below */
-    -webkit-animation: moveNavText 3.5s; /* applies the 'moveNavText' animation below for Safari 4.0 - 8.0 */
-    animation: moveNavText 3.5s; /* applies the "moveNavText" animation for all other browsers */
+#navbar a {
+  color: #f5f5f5; /* colours the menu text white */
+  background-color: #8080d7; /* default background colour for each of the menu text items */
+  padding: 0.75vw 1vw; /* provides some space around the menu text items */
+  text-decoration: none; /* removes the underlines from the menu text links */
+  text-transform: uppercase; /* displays the menu text items in capital letters */
+  font-weight: bold; /* makes the menu text heavier than regular text */
+  font-size: 1.2vw; /* specifies the font size of the menu text items */
+  text-align: center; /* centres each menu text item within its container */
+  position: relative; /* sets the text relative to its normal positioning, allowing us to use the "moveNavText" animation defined below */
+  -webkit-animation: moveNavText 3.5s; /* applies the "moveNavText" animation defined below for Safari 4.0 - 8.0 */
+  animation: moveNavText 3.5s; /* applies the "moveNavText" animation for all other browsers */
 }
 
 /* moveNavText animation effect moves the menu text items up from beneath the navbar as the page loads */
 @keyframes moveNavText {
-    from {top: 100px;} /* sets the navbar text fully below the navbar itself when it starts moving */
-    to {top: 0px;} /* raises the navbar text up onto the navbar */
-}
-
-/* screens 576px and smaller will display navbar links equally distributed */
-@media screen and (max-width: 576px) {
-    .navbar a {
-        width: 25%; /* makes each link take up 1/4 of the navbar */
-        font-size: 16px; /* smaller font size for smaller screens */
-        padding: 14px 0; /* removes horizontal padding so that the navbar doesn't break into two lines on smaller screens */
-    }
+  from {
+    top: 100px;
+  } /* sets the navbar text fully below the navbar itself when it starts moving */
+  to {
+    top: 0px;
+  } /* raises the navbar text up onto the navbar */
 }
 
 /* navbar hover effects */
-.navbar a:hover {
-    background-color: rgba(0, 0, 0, .9); /* the background colour displayed when you hover over a menu text link */
+#navbar a:hover {
+  background-color: #121212; /* the background colour displayed when a menu text link is hovered over */
 }
 
 /* navbar home button */
-.navbar a.active {
-    background-color: rgba(0, 0, 0, .9); /* background colour for the navbar menu link with the 'active' class */
+#navbar a.current {
+  background-color: #121212; /* background colour for the navbar menu link with the 'current' class */
 }
+
+/* links to open the contact form */
+.contact {
+  cursor: pointer; /* changes the cursor icon to a pointer on hover or click */
+}
+
 /*** END OF NAVBAR STYLING ***/
 
-/*** VIDEO STYLING ***/
+/*** VIDEO SECTION STYLING ***/
 
- #video-section {
-    min-height: 100vh;
-    background-color: rgba(50, 5, 255, 0.1); /* provides a semi-transparent background to aid legibility of the overlay text */
+#video-section {
+  min-height: 100vh; /* ensures the video background fills the entire height of the viewport, including behind the slideshow */
+  background-color: rgba(50, 5, 255, .1); /* provides a semi-transparent background to aid legibility of the overlay text */
 }
 
-#home {
-    padding-top: 25px; /* allows some extra space between the navbar and the first heading */
-  
-}
-
+/* background video formatting */
 #curtain-video {
-    left: 50%;
-    transform: translate(-50%);
+  position: fixed; /* fixes the video to the page */
+  top: 0; /* ensures there is no space between the top of the video and the top of the page */
+  left: 50%; /* aligns the left edge of the video exactly halfway across the page horizontally (used in conjuction with the transform property below) */
+  transform: translate(-50%); /* shifts the entire video back exactly half the page's width to the left, so that the video is centred horizontally */
+  min-width: 100vw; /* ensures the video is displayed across the full width of the page */
+  z-index: -1; /* places the video behind the other elements on the page */
 }
 
-/* background video */
-#curtain-video {
-    background-color: rgba(50, 5, 255, 0.1); /* provides a semi-transparent background to aid legibility of the overlay text */
-    position: fixed; /* fixes the video to the page */
-    right: 0; /* ensures there is no space between the edge of the video and the edge of the page */
-    top: 0; /* ensures there is no space between the top of the video and the top of the page */
-    min-width: 100%; /* ensures the video is displayed across the full width of the page */
-    z-index: -1; /* places the video behind the other elements on the page */
-}
-
-/* removal of background video for screens 576px and smaller */
-@media screen and (max-width: 576px) {
-    #curtain-video {
-        display: none;
-    }
-}
-
-/* video overlay text */
+/* video overlay text and image */
 #hero {
-    width: 100%; /* ensures the overlay text container completely fills the width of the video */
-    height: 100vh;
-    padding: 50px; /* provides some space around the overlay text */
-    position: relative; /* sets the overlay text relative to its normal position, allowing us to use the "moveVideoText" animation below */
-    -webkit-animation: moveOverlayText 5.75s; /* applies the 'moveOverlayText animation below for Safari 4.0 - 8.0 */
-    animation: moveOverlayText 5.75s; /* applies the "moveOverlayText" animation for all other browsers */
+  height: 100vh; /* ensures the overlay text-and-image container fills the entire height of the viewport so that the slideshow cannot be seen at the bottom of the page when it first loads */
+  width: 100%; /* ensures the overlay text-and-image container completely covers the width of the video */
+  padding: 5vh; /* provides some space around the contents of the hero area */
+  position: relative; /* sets the overlay text-and-image container relative to its normal position, allowing us to use the "moveVideoText" animation defined below */
+  -webkit-animation: moveHeroOverlay 5.75s; /* applies the "moveHeroOverlay" animation defined below for Safari 4.0 - 8.0 */
+  animation: moveHeroOverlay 5.75s; /* applies the "moveHeroOverlay" animation for all other browsers */
 }
 
+/* moveHeroOverlay animation effect makes the entire hero section slide down into position as the page loads */
+@keyframes moveHeroOverlay {
+  from {
+    top: -100vh;
+  } /* sets the position of the hero section above the viewport as the page starts loading */
+  to {
+    top: 0vh;
+  } /* moves the hero section down to its normal positioning on the viewport */
+}
+
+/* hero image */
 #hero img {
-    margin-top: 75px;
-    width: 50vw;
-    height: auto;
-    -webkit-animation: glowPic 3s ease-in-out infinite alternate; /* applies the "glowText" animation below for Safari 4.0 - 8.0 */
-    animation: glowPic 3s ease-in-out infinite alternate; /* applies the "glowText" animation for all other browsers */
+  margin: 5vh auto; /* provides some additonal space above and below the hero image */
+  width: 45vw; /* sets the width of the hero image to just under half that of the viewport */
+  height: auto; /* allows the hero image to automatically assume its natural height proportional to its width */
+  -webkit-animation: glowPic 3s ease-in-out infinite alternate; /* applies the "glowPic" animation below for Safari 4.0 - 8.0 */
+  animation: glowPic 3s ease-in-out infinite alternate; /* applies the "glowPic" animation for all other browsers */
 }
 
+/* glowPic animation effect makes the page's hero image appear to glow, using multiple stacked and coloured shadow effects together with animation */
 @keyframes glowPic {
-    from {
-      box-shadow: 0 0 10px #f5f5f5, 0 0 20px #f5f5f5, 0 0 30px #3E3EA7, 0 0 40px #3E3EA7, 0 0 50px #3E3EA7, 0 0 60px #3E3EA7, 0 0 70px #3E3EA7;}
-    to {
-     box-shadow: 0 0 20px #f5f5f5, 0 0 30px #8080D7, 0 0 40px #8080D7, 0 0 50px #8080D7, 0 0 60px #8080D7, 0 0 70px #8080D7, 0 0 80px #8080D7;}
+  from {
+    box-shadow: 0 0 5px #f5f5f5, 0 0 10px #f5f5f5, 0 0 15px #3e3ea7,
+      0 0 20px #3e3ea7, 0 0 25px #3e3ea7, 0 0 30px #3e3ea7, 0 0 35px #3e3ea7;
   }
-    
- /* @keyframes glowPic {
-    from {
-      box-shadow: 0 0 5px #f5f5f5, 0 0 10px #f5f5f5, 0 0 15px #3E3EA7, 0 0 20px #3E3EA7, 0 0 25px #3E3EA7, 0 0 30px #3E3EA7, 0 0 35px #3E3EA7;}
-    to {
-      box-shadow: 0 0 15px #f5f5f5, 0 0 25px #8080D7, 0 0 30px #8080D7, 0 0 35px #8080D7, 0 0 40px #8080D7, 0 0 45px #8080D7, 0 0 50px #8080D7;}
-  }*/
-
-@keyframes moveOverlayText {
-    from {top: -100vw;} /* sets the position of the overlay text above the viewport as the page starts loading */
-    to {top: 0vw;} /* moves the overlay text down to its normal positioning on the viewport */
+  to {
+    box-shadow: 0 0 10px #f5f5f5, 0 0 15px #8080d7, 0 0 20px #8080d7,
+      0 0 25px #8080d7, 0 0 30px #8080d7, 0 0 35px #8080d7, 0 0 40px #8080d7;
+  }
 }
 
-#hero p {
-    color: #f5f5f5; /* overrides the colour of the paragraph text for this section */
-}
+/*** END OF VIDEO SECTION STYLING ***/
 
 /*** SLIDESHOW STYLING ***/
 
-#slideshow_background {
-    background: rgba(255, 255, 255, 0.35); /* This creates a slightly transparent white background that's placed over the video in the background */    
+/* slideshow section background */
+#slideshow-background {
+  background: rgba(255,255, 255, .35); /* creates a slightly transparent white backdrop between the slideshow and the video */
 }
 
+/* container for the actual slides */
+#slideshow-container {
+  position: relative; /* sets the container relative to its normal positioning */
+  margin: 0 auto; /* centres the container horizontally on the page */
+  width: 39.5vw; /* relative sizing of the container set to 39.5% of the viewport width */
+  height: auto; /* automatically adjusts the height of the container according to the content it displays */
+  padding-top: 7.5vh; /* adds a modest padding to the top of the container, equal to 7.5% of the viewport height */
+}
+
+/* JavaScript identifier */
 .mySlides {
-    display: block;
+  display: none; /* prevents the slideshow images from being displayed by default (this will be selectively reversed using JavaScript) */
 }
 
-#slideshow_container {
-    position: relative;
-    margin: 0 auto;
-    width: 39.5vw;
-    height: auto;
-    padding-top: 4%; 
-}
-
-#slideshow_container a {
-    text-decoration: none;
-}
-
+/* images contained within the slideshow */
 .slideshow-image {
-    min-width: 100%;
-    height: auto;
-    vertical-align: middle;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .6);
+  width: 100%; /* each slide image fills the width of the slideshow container */
+  height: auto; /* the height of the slide images is automatically adjusted in proportion to their width */
+  vertical-align: middle; /* centres the slide images vertically within the slideshow container */
 }
 
+/* slideshow images hover effect */
 .slideshow-image:hover {
-    transform: none;
+  transform: none; /* overrides the earlier instruction for images to increase in size on hover */
 }
 
-.previous, .next {
-    position: absolute; 
-    width: auto;
-    top: 50%;
-    padding: 2vw;
-    color: #a9a9a9;
-    font-weight: bold;
-    font-size: 1.5vw;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer; 
-    user-select: none;
-    transition: .6s ease;
+/* removes the underline from the previous and next buttons on the slideshow */
+#slideshow-container a {
+  text-decoration: none;
 }
 
+/* previous and next buttons */
+.previous,
 .next {
-    right: 0;
-    border-radius: 5px 0 0 5px;
+  position: absolute; /* positions the previous and next buttons absolutely in relation to the parent container */
+  width: auto; /* adjusts the width of the buttons automatically in relation to their content */
+  top: 50%; /* sets the buttons halfway down the height of their parent container */
+  padding: 2vw; /* adds a padding equal to 2% of the viewport width to the inside of the buttons */
+  color: #a9a9a9; /* font colour for the arrow text */
+  font-weight: bold;
+  font-size: 1.5vw;
+  border-radius: 0 5px 5px 0; /* adds a slightly rounded border to the top and bottom right corners of the button */
+  cursor: pointer; /* changes the cursor icon to a pointer on hover or click */
+  transition: 0.6s ease; /* specifies the details of the hover transition for these elements */
 }
 
-.previous:hover, .next:hover {
-    background-color: rgba(0, 0, 0, .8);
-    color: #f9f9f9; 
+/* next button overrides */
+.next {
+  right: 0; /* moves the next button to the right side of the slideshow container */
+  border-radius: 5px 0 0 5px; /* reverses the border radius on the next button to the top and bottom left corners */
 }
 
+/* hover effects for the previous and next buttons */
+.previous:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, .9); /* addes a transparent black colour to the buttons' background on hover */
+  color: #f9f9f9; /* makes the arrow text whiter on hover */
+}
+
+/* slideshow text */
 .slideshow-text {
-    position: absolute; 
-    width: 100%;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .75);
-    border-radius: 0 0 7px 7px;
-    padding: 1vw;
-    text-align: center;
-    font-family: Poppins, Roboto, sans-serif;
-    font-size: 1.5vw;
-    font-weight: bold;
-    letter-spacing: .1vw;
-    color: #f9f9f9;
+  position: absolute; /* ensures the text is positioned within the image */
+  width: 100%; /* the element covers the full width of the image */
+  bottom: 0; /* ensures the element lies flush with the bottom edge of the image */
+  background-color: rgba(0, 0, 0, .9); /* gives a slightly transparent black background to the slidesshow text */
+  border-radius: 0 0 7px 7px; /* gives the bottom left and right corners of the background rounded corners */
+  padding: 1vw; /* adds a padding equal to 1% of the viewport width to the slideshow text area */
+  text-align: center; /* centre-aligns the text within the image */
+  font-size: 1.5vw; /* font size equal to 1.5% of the viewport width */
+  font-weight: bold;
+  letter-spacing: .1vw; /* adds a slight spacing between the letters */
+  color: #f9f9f9; /* gives the text a near-white colour */
 }
 
+/* the navigation dots under the slideshow */
 .dot {
-    display: inline-block;
-    height: 1vw;
-    width: 1vw; 
-    margin: 1vw .25vw 2vw .25vw;
-    border-radius: 50%;
-    background-color: #f9f9f9;
-    cursor: pointer; 
-    user-select: none;
-    transition: background-color .6s ease;
-    z-index: 1;    
+  display: inline-block; /* allows the dots to sit next to each other rather than each take up a new line */
+  height: 1vw; /* the dots are sized equal to 1% of the viewport width */
+  width: 1vw; /* the dots are sized equal to 1% of the viewport height */
+  margin: 1vw .25vw 2vw; /* adds a margin equal to 1% of the viewport height above, 2% below, and .25% between each dot */
+  border-radius: 50%; /* rounds the corners of the dots to make perfect circles */
+  background-color: #f9f9f9; /* gives the dots a near-white colour */
+  cursor: pointer; /* changes the cursor icon to a pointer on hover or click */
+  transition: background-color 0.6s ease; /* specifies the details of the dots' hover transitions */
+  z-index: 1; /* ensures the dots will be displayed above other elements */
 }
 
-.active, .dot:hover {
-    background-color: rgba(0, 0, 0, .9);
+/* hover effect for slideshow dots */
+.active,
+.dot:hover {
+  background-color: #121212; /* turns the dots' colour to near-black when active or hovered over */
 }
 
+/* fade-in animation effect makes the slideshow images appear to emerge from near-transparency to full opacity as they load */
 .fade {
-    animation-name: fade;
-    animation-duration: 1.5s; 
-    -webkit-animation-name: fade;
-    -webkit-animation-name: 1.5s; 
+  -webkit-animation: fadeIn 1.5s ease-in-out; /* applies the "fadeIn" animation defined below for Safari 4.0 - 8.0 */
+  animation: fadeIn 1.5s ease-in-out; /* applies the "fadeIn" animation for all other browsers */
 }
 
-@keyframes fade {
-    from { opacity: .4; }
-    to { opacity: 1; }
+@keyframes fadeIn {
+  from {
+    opacity: 0.4; /* image starts near-transparent */
+  }
+  to {
+    opacity: 1; /* image ends fully opaque */
+  }
 }
 
-@-webkit-keyframes fade {
-    from { opacity: .4; }
-    to { opacity: 1; }
-}
-
+/* overrides and removes the grayscale transition animation applied earlier for images within the slideshow */
 .fade img {
-    filter: none;
+  filter: none;
 }
 
 /* END SLIDESHOW STYLING */
 
 /*** MAIN CONTENT STYLING ***/
+
 /* row styling */
 .row {
-    display: flex; /* makes the row a flexbox container */
-    flex-direction: row; /* makes the row container's main axis horizontal */
+  display: flex; /* makes the row a flexbox container */
+  flex-direction: row; /* makes the row container's main axis horizontal */
 }
 
 /* column styling */
 .column-light {
-    width: 50%;  /* makes the column take up exactly half of the page width */
-    padding: 50px; /* gives the column 50px padding on all sides */
-    height: 450px; /* sets the height of the column */
-    background-color: #f5f5f5; /* background colour for columns containing images */
-}
-.column-dark {
-    width: 50%; /* makes the column take up exactly half of the page width */
-    padding: 50px; /* gives the column 50px padding on all sides */
-    height: 450px; /* sets the height of the column */
-    background-color: #e0e0e0; /* background colour for columns containing text */ 
+  width: 50%; /* makes the column take up exactly half of the page width */
+  padding: 7.5vh 5vh; /* gives the column a modest padding equal to 7.5% of the viewport height top and bottom and 5% left and right */
+  min-height: 450px; /* sets the height of the column */
+  background-color: #f5f5f5; /* near-white background colour for columns containing images */
 }
 
-.column-tall { 
-    height: 500px; /* additional styling for columns in the final row, overriding the height to give more room for the contact form while keeping the rest of the formatting from the columns above */
+.column-dark {
+  width: 50%; /* makes the column take up exactly half of the page width */
+  padding: 7.5vh 5vh; /* gives the column a modest padding equal to 7.5% of the viewport height top and bottom and 5% left and right */
+  min-height: 450px; /* sets the height of the column */
+  background-color: #e0e0e0; /* darker background colour for columns containing text */
 }
+
 /*** END OF MAIN CONTENT STYLING ***/
 
 /*** CONTACT FORM STYLING ***/
 
+/* general styling for all buttons */
+button {
+  width: 100%; /* each button fills the full width of its container */
+  height: auto; /* automatically adjusts the height of the button according to the content it displays */
+  margin: 1vw 0; /* adds space between the buttons and the elements above and below them, equal to 1% of the viewport width */
+  padding: 1vw; /* internal padding within the button sized relative to the width of the viewport */
+  border: 1px solid #f5f5f5; /* gives the button a thin, near-white border */
+  border-radius: 5px; /* slightly rounds the corners of the contact form */
+  color: #212427; /* sets the colour for the button text font */
+  font-weight: bold;
+  cursor: pointer; /* changes the cursor icon to a pointer on hover or click */
+  -webkit-transition-duration: .5s; /* makes the transition on and off hover last half a second for Safari 4.0-8.0 */
+  transition-duration: .5s; /* makes the transition on and off hover last half a second for all other browsers */
+}
+
+/* button used to open the contact form, fixed near the bottom of the page */
 .popup-button {
-    position: fixed;
-    bottom: 1.75vw;
-    right: 1.75vw;
-    width: 20vw;
-    border-radius: 7px;
-    background-color: #8080D7; /* sets the background colour of the submit button */
-    color: #f5f5f5;
-    border: 1px solid #f5f5f5;
-    cursor: pointer; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .6); /* creates an internal shadow inside the text box on hover */
-    animation: movePopup 3.5s; /* Animation set for 5 seconds */
-    -webkit-animation: movePopup 3.5s; /* Animation for 5 seconds for Safari 4.0-8.0 */
+  position: fixed; /* the button is positioned relative to the viewport and stays in the same location no matter what */
+  bottom: 1.75vw; /* positions the button slightly up from the bottom of the viewport */
+  right: 1.75vw; /* positions the button slightly to the left of the right edge of the viewport */
+  width: 15vw; /* sets the width of the button at 10% of the viewport width */
+  background-color: #8080d7; /* sets the button's background colour */
+  color: #f5f5f5; /* sets the colour of the button text to near-white */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .4); /* adds a subtle drop-shadow effect to the bottom of the button */
+  -webkit-animation: movePopup 3.5s; /* applies the "movePopup" animation defined below for Safari 4.0 - 8.0 */
+  animation: movePopup 3.5s; /* applies the "movePopup" animation for all other browsers */
 }
 
+/* movePopup animation moves the contact button from off the right side of the screen to its fixed location on the viewport */
 @keyframes movePopup {
-    from {right: -40vw;} 
-    to {right: 1.75vw;}
+  from {
+    right: -40vw;
+  }
+  to {
+    right: 1.75vw;
+  }
 }
 
-@-webkit-keyframes movePopup {
-    from {right: -40vw;} 
-    to {right: 1.75vw;}
-}
-
+/* contact form positioning and pop-up ability */
 .form-popup {
-    display: none;
-    position: fixed; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 500; 
+  display: none; /* sets the display to none until it is made visible using JavaScript */
+  position: fixed; /* the form stays in the same location on the page no matter what */
+  top: 50%; /* positions the element at the centre of the viewport vertically */
+  left: 50%; /* positions the element at the centre of the viewport horizontally */
+  transform: translate(-50%, -50%); /* moves the element upwards and leftwards by 50% of its own height and width respectively, to centre it exactly in the middle of the viewport */
+  z-index: 10; /*ensures the visible contact form displays above all other elements on the page */
 }
 
-/* form element */
+/* contact form styling */
 .form-container {
-    max-width: 49vw;
-    padding: 1vw;
-    border-radius: 5px; /* slightly rounds the corners of the contact form */
-    background-color: #8080D7; /* background colour for the form as a whole */
-    border: 1px solid #f9f9f9;
-    padding: 15px; /*  gives the contact form 10px padding on all sides */
-    font-family: Poppins, Roboto, sans-serif; /* sets the font family for the contact form, with alternatives if needed */
-    font-weight: 600;
-    color: #f9f9f9; /* sets the colour for the form text */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .6); 
+  max-width: 40vw; /* sets the maximum width of the form to 40% of the viewport width */
+  border-radius: 5px; /* slightly rounds the corners of the contact form */
+  background-color: #8080d7; /* background colour for the form as a whole */
+  border: 1px solid #f9f9f9; /* gives the form a thin, near-white border */
+  padding: 1vw; /* adds padding equal to 1% of the viewport width between the edges of the form and its contents */
+  color: #f9f9f9; /* sets the colour for the contact form labelling */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .4); /* adds a subtle drop-shadow effect to the bottom of the contact form */
 }
 
-.form-container h1 {
-    font-weight: bold;
-    color: #f9f9f9;
+/* contact form sub-heading */
+.form-container h2 {
+  font-weight: bold;
+  color: #f9f9f9; /* gives the sub-heading a near-white color */
 }
+
 /* form text input boxes */
-.form-container input[type=text],
-.form-container input[type=email] {
-    width: 100%; /* each input box covers the full width of the container */
-    padding: 12px; /* adds padding within each text box on the form */
-    border: 1px solid #ccc; /* sets a solid border and colour to each text box */
-    border-radius: 4px; /* slightly rounds the corners of the text box border */
-    margin: 6px 0 16px; /* adds a margins to the top and bottom of each text box */
+.form-container input[type="text"],
+.form-container input[type="email"] {
+  width: 100%; /* each input box fills the full width of the container */
+  padding: .75vw; /* adds padding within each input box on the form equal to 0.75% of the viewport width */
+  border: 1px solid #f9f9f9; /* gives the button a thin, near-white border */
+  border-radius: 5px; /* slightly rounds the corners of the input box borders */
+  margin: .6vw 0; /* adds space between the input boxes and their labels equal to 0.6% of the viewport width */
 }
 
 /* form text input boxes hover effect */
-.form-container input[type=text]:hover,
-.form-container input[type=email]:hover {
-    box-shadow: 0 0 3px #3d3d3d inset; /* creates an internal shadow inside the text box on hover */
+.form-container input:focus,
+.form-container input[type="text"]:hover,
+.form-container input[type="email"]:hover {
+  outline: none; /* removes the default outline added by some browsers on hover */
+  box-shadow: 0 0 .3vw #3d3d3d inset; /* creates a subtle internal shadow inside the input box on hover or click */
 }
 
-button {
-    width: 100%;
-     height: auto;
-     font-family: Poppins, Roboto, sans-serif;
-     font-size: 1vw;
-     font-weight: bold;
-     padding: 1vw;
-     color: #212427; /* sets the colour for the body text */
- }
-
- button:hover, .form-container .btn:hover {
-    color: #f9f9f9;
-    background-color: rgba(0, 0, 0, .9);
-}
-
-.form-container .btn {
-    background-color: white; 
-    color: rgba(0, 0, 0, .9);
-    border-color: rgba(0, 0, 0, .9);
-    border-radius: 7px;
-    margin-bottom: 1vh; /* Adds space between the submit button and the close button */
-    cursor: pointer;
-}
-
-/* Close button */
-.form-container .cancel {
-    background-color: rgba(0, 0, 0 , .9);
-    color: white;
-    border-color: gray;
-}
-
-/* Styling for close button on hover */
-.form-container .cancel:hover {
-    color: white;
-    background-color: darkred;
-    transition-duration: 1s;
-    -webkit-transition-duration: 1s;
-    border-color: rgba(0, 0, 0, .9);
-}
 /* submit button */
-.form-container input[type=submit] {
-    display: block; /* enables centering of the submit button within its container */
-    margin: 0 auto; /* centres the submit button */
-    padding: 12px 10px; /* adds padding to the submit button */
-    background-color: #8080D7; /* sets the background colour of the submit button */
-    color: #f5f5f5; /* font colour for the submit button text */
-    text-transform: uppercase; /* displays the submit button text in capitals */
-    letter-spacing: 1px; /* pushes the letters of the submit button text a little further apart */
-    font-weight: bold; /* makes the text of the submit button bold */
-    border: 1px solid #8080D7; /* removes the border from the submit button */
-    border-radius: 4px; /* gives the submit button the same rounded corners as the input boxes */
-    cursor: pointer; /* changes the cursor icon to a pointer when over the submit button */
+.form-container .btn {
+  background-color: #f9f9f9; /* sets the background colour of the submit button */
 }
 
-/* submit button hover effect */
-input[type=submit]:hover {
-    background-color: #f5f5f5; /* switches the background colour of the submit button on hover */
-    color: #8080D7; /* switches the font colour for the submit button text on hover */
-    transform: scale(1.1); /* makes the button increase 1.1 times in size on hover */
-    transition: transform 1.5s; /* makes the transform effect last 1.5 seconds */
+/* hover effect for contact and submit buttons */
+button:hover,
+.form-container .btn:hover {
+  color: #f9f9f9; /* text turns near-white when hovered over */
+  background-color: #121212; /* button background turns near-black when hovered over */
 }
+
+/* close button */
+.form-container .cancel {
+  background-color: #121212; /* gives the button background a near-black colour */
+  color: #f9f9f9; /* gives the button text a near-white colour */
+}
+
+/* hover effect for close button */
+.form-container .cancel:hover {
+  background-color: #8b0000; /* gives the button background a deep red colour on hover */
+}
+
 /*** END OF CONTACT FORM STYLING ***/
 
- /* footer element */
- footer {
-    border-top: 1px solid red;
-    max-height: 100px;
-    padding: 20px; /* gives the footer area 2% padding on all sides */
-    background-color: #8080D7; /* sets the background colour for the footer area only */
+/*** FOOTER STYLING ***/
+
+/* footer element */
+footer {
+  padding: 2vw; /* gives the footer area padding equal to 2% of the viewport width on all sides */
+  background-color: #8080d7; /* sets the background colour for the footer area only */
 }
 
- footer p {
-    color: #f5f5f5; /* font colour for text in the footer area */
+footer p {
+  color: #f5f5f5; /* font colour for text in the footer area */
+}
+
+/*** END OF FOOTER STYLING ***/
+
+/*** MEDIA QUERY SECTION ***/
+/* the @media rule is used in media queries to apply different styles for different media/types of devices */
+
+/* removes background video on screens 576px wide and smaller */
+@media screen and (max-width: 576px) {
+  #curtain-video {
+    display: none;
+  }
+
+  /* makes the contact button larger on mobile screens where fingers are used instead of a mouse */
+  .popup-button {
+    width: 25vw;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #slideshow-container {
+    width: 75vw;
+  }
+  .slideshow-text {
+    font-size: 2.5vw;
+  }
+
+  /* allows standard images to assume their natural height in relation to their width on smaller screens */
+  img {
+    height: auto;
+  }
+
+  /* pushes the buttons slightly further apart vertically on smaller screens */
+  button {
+    margin: 2.5vw 0;
+  }
+
+/* the form is made relatively wider and more manageable on smaller screens */
+  .form-container {
+    min-width: 90vw;
+  }
+}
+
+/* Screens 1080px wide and smaller will display navbar links equally distributed across the top of the page */
+@media screen and (max-width: 1080px) {
+  #navbar a {
+    width: 20%; /* sets the width of each individual link to one-fifth of the navbar */
+    font-size: 2.5vw;
+  }
+}
+
+/*Media rules for heading and paragraph font sizes for different device widths */
+
+@media screen and (max-width: 527px) {
+  p {
+    font-size: 3vw;
+  }
+
+  #tagline {
+    font-size: 5vw;
+  }
+
+  h1 {
+    font-size: 15vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+  p {
+    font-size: 2.25vw;
+  }
+
+  #tagline {
+    font-size: 4.5vw;
+  }
+
+  h1 {
+    font-size: 12.5vw;
+  }
+
+  h2 {
+    font-size: 3.25vw;
+  }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+  p {
+    font-size: 2vw;
+  }
+
+  #tagline {
+    font-size: 4vw;
+  }
+
+  h1 {
+    font-size: 10vw;
+  }
+
+  h2 {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+  p {
+    font-size: 1.75vw;
+  }
+
+  #tagline {
+    font-size: 2.5vw;
+  }
+
+  h1 {
+    font-size: 6.5vw;
+  }
+
+  h2 {
+    font-size: 2.75vw;
+  }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+  p {
+    font-size: 1.5vw;
+  }
+
+  #tagline {
+    font-size: 2.25vw;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  h2 {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+  p {
+    font-size: 1.25vw;
+  }
+
+  #tagline {
+    font-size: 2vw;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  h2 {
+    font-size: 2.25vw;
+  }
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+  p {
+    font-size: 1.2vw;
+  }
+
+  #tagline {
+    font-size: 1.75vw;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  h2 {
+    font-size: 2vw;
+  }
 }
