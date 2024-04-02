@@ -410,7 +410,7 @@ button {
   border: 1px solid #f5f5f5; /* gives the button a thin, near-white border */
   border-radius: 5px; /* slightly rounds the corners of the contact form */
   color: #212427; /* sets the colour for the button text font */
-  font-size: 2vw; /* font size equal to 2% of the viewport width */
+  font-size: 1.25vw; /* font size equal to 2% of the viewport width */
   font-weight: bold;
   cursor: pointer; /* changes the cursor icon to a pointer on hover or click */
   -webkit-transition-duration: .5s; /* makes the transition on and off hover last half a second for Safari 4.0-8.0 */
