@@ -7,7 +7,7 @@ A repository of Tech Academy coursework built using HTML, CSS and JavaScript, wi
 - [One-Page Website (Adrian Metcalfe Celtic Tours)](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/One-Page-Website/index.html)
 - [Bootstrap4 Project (Academy Cinemas)](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Bootstrap4-Project/academy_cinemas.html)
 - [To-Do App](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/To-Do-App-Project/index.html)
-- [Personal Portfolio Website](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Personal-Portfolio-Website/index.html)
+- [Personal Portfolio Website (theatric.net](https://github.com/theatric/Tech-Academy-Projects/blob/main/JavaScript-Projects/Personal-Portfolio-Website/index.html)
 
 ### Tic Tac Toe
 A simple back-and-forth browser game where the player competes with the web browser to complete a line of three symbols (either Xs or an Os) horizontally, vertically, or diagonally on a nine-square grid. The contest is enhanced with sound effects and animation.
